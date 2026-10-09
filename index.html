@@ -843,6 +843,7 @@ function openBooking(id){
       </form>
     </div>`;
 }
+const CONCIERGE_EMAIL = 'pabloapcv@gmail.com';
 function submitBooking(ev, id){
   ev.preventDefault();
   const y = ALL.find(x=>x.id===id);
@@ -858,13 +859,33 @@ function submitBooking(ev, id){
   localStorage.setItem('lat25_inquiries', JSON.stringify(inquiries));
   updateBadges();
 
+  const durLabel = DUR_LABELS[rec.duration] || rec.duration;
+  const subject = `Booking request: ${y.name} (ID ${y.id})`;
+  const bodyLines = [
+    `Vessel: ${y.name}`,
+    `Vessel ID: ${y.id}  \u2014 look this up in owners_lookup.csv for the operator's contact`,
+    `Size / area: ${y.size}' \u00b7 ${y.area}`,
+    '',
+    `Client name: ${rec.name}`,
+    `Client phone: ${rec.phone}`,
+    `Client email: ${rec.email}`,
+    '',
+    `Preferred date: ${rec.date} at ${rec.time}`,
+    `Charter length: ${durLabel}`,
+    `Party size: ${rec.guests || 'not specified'}`,
+    `Notes: ${rec.notes || '(none)'}`,
+  ];
+  const mailtoUrl = `mailto:${CONCIERGE_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyLines.join('\n'))}`;
+  window.location.href = mailtoUrl;
+
   document.getElementById('detailContent').innerHTML = `
     <button class="panel-close" onclick="closeAll()">\u2715</button>
     <div class="panel-content" style="padding-top:90px">
       <div class="confirm-box">
         <div class="check">\u2713</div>
         <h3>Request sent</h3>
-        <p>We've received your request for <b>${esc(y.name)}</b>. Our concierge team will confirm availability and reach out to you directly to finalize the details.</p>
+        <p>We've received your request for <b>${esc(y.name)}</b>. Your email app should have opened with the request pre-filled \u2014 just hit send. Our concierge team will confirm availability and reach out to you directly to finalize the details.</p>
+        <p class="disclaimer" style="margin-top:10px">If your email app didn't open, email us directly at <b>${CONCIERGE_EMAIL}</b> and mention vessel ID <b>${y.id}</b>.</p>
         <button class="btn-outline" onclick="openDrawer('requests')">View all requests</button>
       </div>
     </div>`;
@@ -894,6 +915,7 @@ function renderDrawer(which){
           <span class="status">Sent</span>
           <b>${esc(r.yachtName)}</b>
           <div class="meta2">${r.date||'\u2014'} at ${r.time||'\u2014'} \u00B7 ${DUR_LABELS[r.duration]||r.duration} \u00B7 ${r.guests} guests</div>
+          <div class="meta2 mono" style="font-size:11px">Vessel ID: ${esc(r.yachtId)}</div>
           <div class="meta2">Our concierge team will confirm with the operator</div>
         </div>`).join('') : '<p style="color:var(--ink-faint);font-size:13.5px">No requests sent yet.</p>'}`;
   }
