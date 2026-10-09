@@ -731,7 +731,7 @@ function galleryHTML(y){
       <button class="gal-nav prev" onclick="event.stopPropagation();galleryStep(-1)" aria-label="Previous photo"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg></button>
       <button class="gal-nav next" onclick="event.stopPropagation();galleryStep(1)" aria-label="Next photo"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg></button>
       <div class="gal-count" id="galCount">1 / ${photos.length}</div>
-      <div class="gal-dots">${photos.map((_,i)=>`<span class="gal-dot${i===0?' active':''}" onclick="event.stopPropagation();gallerySet(${i})"></span>`).join('')}</div>
+      ${photos.length<=12 ? `<div class="gal-dots">${photos.map((_,i)=>`<span class="gal-dot${i===0?' active':''}" onclick="event.stopPropagation();gallerySet(${i})"></span>`).join('')}</div>` : ''}
     ` : ''}
   </div>`;
 }
