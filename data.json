@@ -11,9 +11,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 518,
-      "6h": 776,
-      "8h": 1035
+      "4h": 495,
+      "6h": 743,
+      "8h": 990
     },
     "category": "Day Cruiser",
     "group_label": "Up to 6 guests*",
@@ -39,9 +39,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 518,
-      "6h": 776,
-      "8h": 1035
+      "4h": 495,
+      "6h": 743,
+      "8h": 990
     },
     "category": "Day Cruiser",
     "group_label": "Up to 6 guests*",
@@ -81,8 +81,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 678,
-      "6h": 839
+      "4h": 649,
+      "6h": 803,
+      "8h": 1082
     },
     "category": "Day Cruiser",
     "group_label": "Up to 6 guests*",
@@ -130,9 +131,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 575,
-      "6h": 862,
-      "8h": 1150
+      "4h": 550,
+      "6h": 825,
+      "8h": 1100
     },
     "category": "Day Cruiser",
     "group_label": "Up to 6 guests*",
@@ -176,9 +177,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 759,
-      "6h": 1150,
-      "8h": 1552
+      "4h": 726,
+      "6h": 1100,
+      "8h": 1485
     },
     "category": "Day Cruiser",
     "group_label": "Up to 6 guests*",
@@ -241,9 +242,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 753,
-      "6h": 1133,
-      "8h": 1506
+      "4h": 721,
+      "6h": 1084,
+      "8h": 1441
     },
     "category": "Day Cruiser",
     "group_label": "Up to 10 guests*",
@@ -306,9 +307,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 518,
-      "6h": 776,
-      "8h": 1035
+      "4h": 495,
+      "6h": 743,
+      "8h": 990
     },
     "category": "Day Cruiser",
     "group_label": "Up to 10 guests*",
@@ -352,9 +353,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 776,
-      "6h": 862,
-      "8h": 1552
+      "4h": 639,
+      "6h": 922,
+      "8h": 1231
     },
     "category": "Day Cruiser",
     "group_label": "Up to 10 guests*",
@@ -374,9 +375,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1150,
-      "6h": 1438,
-      "8h": 2070
+      "4h": 1100,
+      "6h": 1375,
+      "8h": 1980
     },
     "category": "Sport Yacht",
     "group_label": "Up to 13 guests*",
@@ -409,8 +410,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1322,
-      "6h": 1610
+      "4h": 1265,
+      "6h": 1540,
+      "8h": 2108
     },
     "category": "Sport Yacht",
     "group_label": "Up to 13 guests*",
@@ -430,9 +432,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 604,
-      "6h": 747,
-      "8h": 977
+      "4h": 578,
+      "6h": 715,
+      "8h": 935
     },
     "category": "Sport Yacht",
     "group_label": "Up to 13 guests*",
@@ -498,9 +500,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1150,
-      "6h": 1725,
-      "8h": 2300
+      "4h": 1100,
+      "6h": 1650,
+      "8h": 2200
     },
     "category": "Sport Yacht",
     "group_label": "Up to 13 guests*",
@@ -520,9 +522,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 634,
-      "6h": 890,
-      "8h": 1144
+      "4h": 606,
+      "6h": 851,
+      "8h": 1094
     },
     "category": "Sport Yacht",
     "group_label": "Up to 13 guests*",
@@ -573,9 +575,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 691,
-      "6h": 948,
-      "8h": 1202
+      "4h": 774,
+      "6h": 1103,
+      "8h": 1417
     },
     "category": "Sport Yacht",
     "group_label": "Up to 13 guests*",
@@ -595,9 +597,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 691,
-      "6h": 948,
-      "8h": 1202
+      "4h": 774,
+      "6h": 1103,
+      "8h": 1417
     },
     "category": "Sport Yacht",
     "group_label": "Up to 13 guests*",
@@ -617,9 +619,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 719,
-      "6h": 1006,
-      "8h": 1294
+      "4h": 688,
+      "6h": 963,
+      "8h": 1238
     },
     "category": "Sport Yacht",
     "group_label": "Up to 13 guests*",
@@ -657,8 +659,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 920,
-      "6h": 1265
+      "4h": 880,
+      "6h": 1210,
+      "8h": 1467
     },
     "category": "Sport Yacht",
     "group_label": "Up to 13 guests*",
@@ -678,9 +681,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 2645,
-      "6h": 3220,
-      "8h": 3795
+      "4h": 2530,
+      "6h": 3080,
+      "8h": 3630
     },
     "category": "Sport Yacht",
     "group_label": "Up to 13 guests*",
@@ -700,8 +703,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 989,
-      "6h": 1196
+      "4h": 946,
+      "6h": 1144,
+      "8h": 1577
     },
     "category": "Sport Yacht",
     "group_label": "Up to 13 guests*",
@@ -753,9 +757,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1495,
-      "6h": 2185,
-      "8h": 3220
+      "4h": 1430,
+      "6h": 2090,
+      "8h": 3080
     },
     "category": "Sport Yacht",
     "group_label": "Up to 13 guests*",
@@ -775,9 +779,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1897,
-      "6h": 2530,
-      "8h": 3289
+      "4h": 1936,
+      "6h": 2783,
+      "8h": 3509
     },
     "category": "Sport Yacht",
     "group_label": "Up to 13 guests*",
@@ -844,9 +848,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 2300,
-      "6h": 2875,
-      "8h": 3450
+      "4h": 2200,
+      "6h": 2750,
+      "8h": 3300
     },
     "category": "Sport Yacht",
     "group_label": "Up to 13 guests*",
@@ -866,9 +870,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 2415,
-      "6h": 3105,
-      "8h": 3795
+      "4h": 2310,
+      "6h": 2970,
+      "8h": 3630
     },
     "category": "Sport Yacht",
     "group_label": "Up to 13 guests*",
@@ -888,9 +892,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 2024,
-      "6h": 2910,
-      "8h": 3668
+      "4h": 1936,
+      "6h": 2783,
+      "8h": 3509
     },
     "category": "Sport Yacht",
     "group_label": "Up to 13 guests*",
@@ -939,8 +943,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1035,
-      "6h": 1610
+      "4h": 990,
+      "6h": 1540,
+      "8h": 1650
     },
     "category": "Sport Yacht",
     "group_label": "Up to 13 guests*",
@@ -960,9 +965,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1438,
-      "6h": 1782,
-      "8h": 2415
+      "4h": 1656,
+      "6h": 2247,
+      "8h": 2949
     },
     "category": "Sport Yacht",
     "group_label": "Up to 13 guests*",
@@ -982,9 +987,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 2415,
-      "6h": 3381,
-      "8h": 4347
+      "4h": 2310,
+      "6h": 3234,
+      "8h": 4158
     },
     "category": "Sport Yacht",
     "group_label": "Up to 13 guests*",
@@ -1026,8 +1031,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1840,
-      "6h": 2300
+      "4h": 1760,
+      "6h": 2200,
+      "8h": 2933
     },
     "category": "Sport Yacht",
     "group_label": "Up to 13 guests*",
@@ -1047,9 +1053,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 862,
-      "6h": 1092,
-      "8h": 1380
+      "4h": 825,
+      "6h": 1045,
+      "8h": 1320
     },
     "category": "Sport Yacht",
     "group_label": "Up to 13 guests*",
@@ -1069,8 +1075,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 2530,
-      "6h": 3220
+      "4h": 990,
+      "6h": 1540,
+      "8h": 1650
     },
     "category": "Sport Yacht",
     "group_label": "Up to 13 guests*",
@@ -1090,8 +1097,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1265,
-      "6h": 1518
+      "4h": 1210,
+      "6h": 1452,
+      "8h": 2017
     },
     "category": "Sport Yacht",
     "group_label": "Up to 18 guests*",
@@ -1111,7 +1119,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1265
+      "4h": 1210,
+      "6h": 1564,
+      "8h": 2017
     },
     "category": "Sport Yacht",
     "group_label": "Up to 18 guests*",
@@ -1152,9 +1162,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1035,
-      "6h": 1495,
-      "8h": 1840
+      "4h": 1210,
+      "6h": 1452,
+      "8h": 2017
     },
     "category": "Sport Yacht",
     "group_label": "Up to 18 guests*",
@@ -1174,9 +1184,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1265,
-      "6h": 1552,
-      "8h": 1840
+      "4h": 1210,
+      "6h": 1485,
+      "8h": 1760
     },
     "category": "Sport Yacht",
     "group_label": "Up to 18 guests*",
@@ -1196,9 +1206,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 862,
-      "6h": 1265,
-      "8h": 1667
+      "4h": 825,
+      "6h": 1210,
+      "8h": 1595
     },
     "category": "Sport Yacht",
     "group_label": "Up to 18 guests*",
@@ -1230,9 +1240,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1150,
-      "6h": 1725,
-      "8h": 2185
+      "4h": 1100,
+      "6h": 1650,
+      "8h": 2090
     },
     "category": "Sport Yacht",
     "group_label": "Up to 18 guests*",
@@ -1252,9 +1262,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1380,
-      "6h": 1840,
-      "8h": 2300
+      "4h": 1320,
+      "6h": 1760,
+      "8h": 2200
     },
     "category": "Sport Yacht",
     "group_label": "Up to 18 guests*",
@@ -1274,9 +1284,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 3450,
-      "6h": 4025,
-      "8h": 4600
+      "4h": 3300,
+      "6h": 3850,
+      "8h": 4400
     },
     "category": "Sport Yacht",
     "group_label": "Up to 18 guests*",
@@ -1345,9 +1355,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1725,
-      "6h": 2616,
-      "8h": 4025
+      "4h": 1650,
+      "6h": 2502,
+      "8h": 3850
     },
     "category": "Sport Yacht",
     "group_label": "Up to 18 guests*",
@@ -1380,9 +1390,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1518,
-      "6h": 2150,
-      "8h": 3162
+      "4h": 1452,
+      "6h": 2057,
+      "8h": 3025
     },
     "category": "Sport Yacht",
     "group_label": "Up to 18 guests*",
@@ -1402,9 +1412,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 805,
-      "6h": 1092,
-      "8h": 1380
+      "4h": 770,
+      "6h": 1045,
+      "8h": 1320
     },
     "category": "Sport Yacht",
     "group_label": "Up to 18 guests*",
@@ -1424,9 +1434,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 805,
-      "6h": 1092,
-      "8h": 1380
+      "4h": 770,
+      "6h": 1045,
+      "8h": 1320
     },
     "category": "Sport Yacht",
     "group_label": "Up to 18 guests*",
@@ -1446,8 +1456,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1840,
-      "6h": 2530
+      "4h": 770,
+      "6h": 1045,
+      "8h": 1320
     },
     "category": "Sport Yacht",
     "group_label": "Up to 18 guests*",
@@ -1467,9 +1478,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1150,
-      "6h": 1380,
-      "8h": 1725
+      "4h": 1100,
+      "6h": 1320,
+      "8h": 1650
     },
     "category": "Sport Yacht",
     "group_label": "Up to 18 guests*",
@@ -1489,9 +1500,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1254,
-      "6h": 1725,
-      "8h": 2133
+      "4h": 1199,
+      "6h": 1650,
+      "8h": 2041
     },
     "category": "Sport Yacht",
     "group_label": "Up to 18 guests*",
@@ -1511,9 +1522,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1863,
-      "6h": 2277,
-      "8h": 2691
+      "4h": 1782,
+      "6h": 2178,
+      "8h": 2574
     },
     "category": "Sport Yacht",
     "group_label": "Up to 18 guests*",
@@ -1533,9 +1544,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 2300,
-      "6h": 3450,
-      "8h": 4600
+      "4h": 2200,
+      "6h": 3300,
+      "8h": 4400
     },
     "category": "Sport Yacht",
     "group_label": "Up to 18 guests*",
@@ -1555,9 +1566,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 2818,
-      "6h": 3565,
-      "8h": 4255
+      "4h": 2695,
+      "6h": 3410,
+      "8h": 4070
     },
     "category": "Sport Yacht",
     "group_label": "Up to 18 guests*",
@@ -1577,8 +1588,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 690,
-      "6h": 1035
+      "4h": 660,
+      "6h": 990,
+      "8h": 1100
     },
     "category": "Sport Yacht",
     "group_label": "Up to 18 guests*",
@@ -1614,9 +1626,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 977,
-      "6h": 1438,
-      "8h": 1782
+      "4h": 935,
+      "6h": 1375,
+      "8h": 1705
     },
     "category": "Sport Yacht",
     "group_label": "Up to 18 guests*",
@@ -1636,9 +1648,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1035,
-      "6h": 1495,
-      "8h": 1840
+      "4h": 990,
+      "6h": 1430,
+      "8h": 1760
     },
     "category": "Sport Yacht",
     "group_label": "Up to 18 guests*",
@@ -1668,9 +1680,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1725,
-      "6h": 2300,
-      "8h": 2875
+      "4h": 1650,
+      "6h": 2200,
+      "8h": 2750
     },
     "category": "Sport Yacht",
     "group_label": "Up to 18 guests*",
@@ -1690,8 +1702,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1610,
-      "6h": 2300
+      "4h": 990,
+      "6h": 1430,
+      "8h": 1760
     },
     "category": "Sport Yacht",
     "group_label": "Up to 18 guests*",
@@ -1727,9 +1740,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1955,
-      "6h": 2645,
-      "8h": 3335
+      "4h": 1782,
+      "6h": 2178,
+      "8h": 2574
     },
     "category": "Sport Yacht",
     "group_label": "Up to 18 guests*",
@@ -1774,7 +1787,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "6h": 4500
+      "4h": 1650,
+      "6h": 2200,
+      "8h": 2750
     },
     "category": "Sport Yacht",
     "group_label": "Up to 18 guests*",
@@ -1810,9 +1825,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 2208,
-      "6h": 2898,
-      "8h": 3726
+      "4h": 2112,
+      "6h": 2772,
+      "8h": 3564
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -1832,9 +1847,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1035,
-      "6h": 1495,
-      "8h": 1955
+      "4h": 990,
+      "6h": 1430,
+      "8h": 1870
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -1864,9 +1879,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1380,
-      "6h": 1955,
-      "8h": 2300
+      "4h": 1320,
+      "6h": 1870,
+      "8h": 2200
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -1886,8 +1901,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1725,
-      "6h": 2300
+      "4h": 990,
+      "6h": 1430,
+      "8h": 1870
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -1917,9 +1933,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1380,
-      "6h": 1955,
-      "8h": 2530
+      "4h": 1320,
+      "6h": 1870,
+      "8h": 2420
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -1967,9 +1983,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1438,
-      "6h": 2012,
-      "8h": 2415
+      "4h": 1375,
+      "6h": 1925,
+      "8h": 2310
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -1989,9 +2005,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1897,
-      "6h": 2242,
-      "8h": 2760
+      "4h": 1815,
+      "6h": 2145,
+      "8h": 2640
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -2011,9 +2027,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1265,
-      "6h": 1840,
-      "8h": 2415
+      "4h": 1210,
+      "6h": 1760,
+      "8h": 2310
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -2068,9 +2084,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 2530,
-      "6h": 2990,
-      "8h": 3450
+      "4h": 2420,
+      "6h": 2860,
+      "8h": 3300
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -2090,9 +2106,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 889,
-      "6h": 1303,
-      "8h": 1658
+      "4h": 850,
+      "6h": 1246,
+      "8h": 1586
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -2117,9 +2133,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 920,
-      "6h": 1265,
-      "8h": 1610
+      "4h": 880,
+      "6h": 1210,
+      "8h": 1540
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -2139,9 +2155,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1092,
-      "6h": 1495,
-      "8h": 1840
+      "4h": 1045,
+      "6h": 1430,
+      "8h": 1760
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -2185,7 +2201,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1150
+      "4h": 1375,
+      "6h": 1925,
+      "8h": 2310
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -2233,7 +2251,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "6h": 4500
+      "4h": 2420,
+      "6h": 2860,
+      "8h": 3300
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -2258,9 +2278,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1380,
-      "6h": 1840,
-      "8h": 2300
+      "4h": 1320,
+      "6h": 1870,
+      "8h": 2420
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -2280,9 +2300,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1667,
-      "6h": 2472,
-      "8h": 3277
+      "4h": 1320,
+      "6h": 1760,
+      "8h": 2200
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -2302,9 +2322,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1254,
-      "6h": 1725,
-      "8h": 2133
+      "4h": 1439,
+      "6h": 1980,
+      "8h": 2449
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -2366,9 +2386,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1708,
-      "6h": 2300,
-      "8h": 3030
+      "4h": 1138,
+      "6h": 1645,
+      "8h": 2150
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -2411,9 +2431,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1725,
-      "6h": 2530,
-      "8h": 3335
+      "4h": 1595,
+      "6h": 2365,
+      "8h": 3135
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -2445,9 +2465,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 2012,
-      "6h": 2645,
-      "8h": 3910
+      "4h": 1733,
+      "6h": 2302,
+      "8h": 2995
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -2467,9 +2487,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 2116,
-      "6h": 2513,
-      "8h": 3042
+      "4h": 1100,
+      "6h": 1650,
+      "8h": 2200
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -2489,9 +2509,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 2875,
-      "6h": 4025,
-      "8h": 4715
+      "4h": 2750,
+      "6h": 3850,
+      "8h": 4510
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -2511,9 +2531,9 @@
     "jacuzzi": false,
     "jetski": true,
     "prices": {
-      "4h": 3450,
-      "6h": 4830,
-      "8h": 6095
+      "4h": 3300,
+      "6h": 4620,
+      "8h": 5830
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -2533,9 +2553,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1334,
-      "6h": 1863,
-      "8h": 2392
+      "4h": 1276,
+      "6h": 1782,
+      "8h": 2288
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -2573,8 +2593,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1150,
-      "6h": 1725
+      "4h": 1100,
+      "6h": 1650,
+      "8h": 1833
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -2625,8 +2646,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1265,
-      "6h": 1840
+      "4h": 1210,
+      "6h": 1760,
+      "8h": 2017
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -2664,8 +2686,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 3335,
-      "6h": 4025
+      "4h": 3190,
+      "6h": 3850,
+      "8h": 5317
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -2685,9 +2708,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1380,
-      "6h": 1955,
-      "8h": 2530
+      "4h": 1320,
+      "6h": 1870,
+      "8h": 2420
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -2729,9 +2752,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1190,
-      "6h": 1719,
-      "8h": 2248
+      "4h": 1138,
+      "6h": 1645,
+      "8h": 2150
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -2751,7 +2774,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1840
+      "4h": 1760,
+      "6h": 2275,
+      "8h": 2933
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -2781,9 +2806,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1755,
-      "6h": 2415,
-      "8h": 2987
+      "4h": 1199,
+      "6h": 1650,
+      "8h": 2041
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -2807,9 +2832,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1035,
-      "6h": 1495,
-      "8h": 1840
+      "4h": 1439,
+      "6h": 1980,
+      "8h": 2449
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -2841,7 +2866,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1150
+      "4h": 1100,
+      "6h": 1422,
+      "8h": 1833
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -2861,9 +2888,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 889,
-      "6h": 1303,
-      "8h": 1658
+      "4h": 850,
+      "6h": 1246,
+      "8h": 1586
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -2883,9 +2910,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1150,
-      "6h": 1725,
-      "8h": 2300
+      "4h": 1100,
+      "6h": 1650,
+      "8h": 2200
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -2905,9 +2932,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 977,
-      "6h": 1438,
-      "8h": 1782
+      "4h": 935,
+      "6h": 1375,
+      "8h": 1705
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -2927,9 +2954,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1610,
-      "6h": 2300,
-      "8h": 3220
+      "4h": 1733,
+      "6h": 2302,
+      "8h": 2995
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -2966,9 +2993,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1380,
-      "6h": 1840,
-      "8h": 2185
+      "4h": 1320,
+      "6h": 1760,
+      "8h": 2090
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -3016,9 +3043,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1092,
-      "6h": 1696,
-      "8h": 2185
+      "4h": 1045,
+      "6h": 1623,
+      "8h": 2090
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -3056,9 +3083,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1035,
-      "6h": 1380,
-      "8h": 1840
+      "4h": 990,
+      "6h": 1320,
+      "8h": 1760
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -3103,8 +3130,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1840,
-      "6h": 2415
+      "4h": 1679,
+      "6h": 2310,
+      "8h": 2857
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -3128,9 +3156,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 2300,
-      "6h": 3220,
-      "8h": 4025
+      "4h": 1045,
+      "6h": 1623,
+      "8h": 2090
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -3201,9 +3229,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 2760,
-      "6h": 3105,
-      "8h": 3680
+      "4h": 1925,
+      "6h": 2530,
+      "8h": 3740
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -3273,9 +3301,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 2760,
-      "6h": 3105,
-      "8h": 3680
+      "4h": 1540,
+      "6h": 2200,
+      "8h": 3080
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -3316,8 +3344,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 2875,
-      "6h": 3450
+      "4h": 1650,
+      "6h": 2420,
+      "8h": 3190
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -3337,8 +3366,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 3105,
-      "6h": 4025
+      "4h": 1045,
+      "6h": 1623,
+      "8h": 2090
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -3358,8 +3388,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 4025,
-      "6h": 4830
+      "4h": 2024,
+      "6h": 2404,
+      "8h": 2910
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -3379,9 +3410,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 5750,
-      "6h": 6900,
-      "8h": 8050
+      "4h": 2750,
+      "6h": 3850,
+      "8h": 4510
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -3401,9 +3432,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 5750,
-      "6h": 6900,
-      "8h": 8050
+      "4h": 2750,
+      "6h": 3850,
+      "8h": 4510
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -3423,8 +3454,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "6h": 3750,
-      "8h": 3750
+      "4h": 3300,
+      "6h": 4620,
+      "8h": 5830
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -3462,9 +3494,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 920,
-      "6h": 1380,
-      "8h": 1840
+      "4h": 880,
+      "6h": 1320,
+      "8h": 1760
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -3510,9 +3542,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 4140,
-      "6h": 4968,
-      "8h": 5796
+      "4h": 1833,
+      "6h": 2615,
+      "8h": 3225
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -3532,9 +3564,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1840,
-      "6h": 2242,
-      "8h": 3680
+      "4h": 1760,
+      "6h": 2145,
+      "8h": 3520
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -3554,9 +3586,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 2300,
-      "6h": 2990,
-      "8h": 3680
+      "4h": 2200,
+      "6h": 2860,
+      "8h": 3520
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -3576,9 +3608,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 7245,
-      "6h": 8280,
-      "8h": 9631
+      "4h": 6930,
+      "6h": 7920,
+      "8h": 9212
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -3660,8 +3692,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1610,
-      "6h": 2185
+      "4h": 1540,
+      "6h": 2090,
+      "8h": 2567
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -3681,8 +3714,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1610,
-      "6h": 2070
+      "4h": 1540,
+      "6h": 1980,
+      "8h": 2567
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -3726,9 +3760,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1495,
-      "6h": 2070,
-      "8h": 2415
+      "4h": 1045,
+      "6h": 1485,
+      "8h": 1595
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -3772,9 +3806,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1092,
-      "6h": 1552,
-      "8h": 1667
+      "4h": 1238,
+      "6h": 1733,
+      "8h": 1953
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -3794,9 +3828,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 2645,
-      "6h": 2990,
-      "8h": 3450
+      "4h": 1430,
+      "6h": 1980,
+      "8h": 2310
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -3844,7 +3878,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "6h": 4800
+      "4h": 2200,
+      "6h": 2860,
+      "8h": 3520
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -3892,9 +3928,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 2990,
-      "6h": 3565,
-      "8h": 4140
+      "4h": 2860,
+      "6h": 3410,
+      "8h": 3960
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -3925,9 +3961,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1035,
-      "6h": 1322,
-      "8h": 1610
+      "4h": 990,
+      "6h": 1265,
+      "8h": 1540
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -3960,9 +3996,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1294,
-      "6h": 1639,
-      "8h": 1984
+      "4h": 1238,
+      "6h": 1568,
+      "8h": 1898
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -4004,9 +4040,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 2300,
-      "6h": 3450,
-      "8h": 4600
+      "4h": 2200,
+      "6h": 3300,
+      "8h": 4400
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -4026,9 +4062,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 2300,
-      "6h": 3450,
-      "8h": 4600
+      "4h": 2200,
+      "6h": 3300,
+      "8h": 4400
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -4048,9 +4084,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1610,
-      "6h": 2070,
-      "8h": 3220
+      "4h": 1540,
+      "6h": 1980,
+      "8h": 3080
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -4070,7 +4106,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1495
+      "4h": 1430,
+      "6h": 1849,
+      "8h": 2383
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -4098,9 +4136,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1150,
-      "6h": 1610,
-      "8h": 2070
+      "4h": 1100,
+      "6h": 1540,
+      "8h": 1980
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -4120,9 +4158,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 2645,
-      "6h": 3335,
-      "8h": 4025
+      "4h": 2530,
+      "6h": 3190,
+      "8h": 3850
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -4142,9 +4180,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 2990,
-      "6h": 3105,
-      "8h": 3680
+      "4h": 1540,
+      "6h": 1980,
+      "8h": 3080
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -4164,7 +4202,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "6h": 5000
+      "4h": 2530,
+      "6h": 3190,
+      "8h": 3850
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -4184,9 +4224,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1495,
-      "6h": 1725,
-      "8h": 2990
+      "4h": 1650,
+      "6h": 2310,
+      "8h": 2970
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -4206,9 +4246,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1725,
-      "6h": 2300,
-      "8h": 3450
+      "4h": 1650,
+      "6h": 2200,
+      "8h": 3300
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -4228,9 +4268,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1725,
-      "6h": 2300,
-      "8h": 2875
+      "4h": 2310,
+      "6h": 2970,
+      "8h": 3630
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -4275,9 +4315,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1822,
-      "6h": 2391,
-      "8h": 2846
+      "4h": 1742,
+      "6h": 2287,
+      "8h": 2722
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -4297,9 +4337,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1822,
-      "6h": 2391,
-      "8h": 2846
+      "4h": 1742,
+      "6h": 2287,
+      "8h": 2722
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -4319,9 +4359,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1725,
-      "6h": 2530,
-      "8h": 3105
+      "4h": 1650,
+      "6h": 2200,
+      "8h": 2750
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -4381,9 +4421,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 2415,
-      "6h": 3105,
-      "8h": 3795
+      "4h": 2310,
+      "6h": 2970,
+      "8h": 3630
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -4421,9 +4461,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 2875,
-      "6h": 3910,
-      "8h": 5175
+      "4h": 2750,
+      "6h": 3740,
+      "8h": 4950
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -4443,9 +4483,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 3105,
-      "6h": 3680,
-      "8h": 4830
+      "4h": 2970,
+      "6h": 3520,
+      "8h": 4620
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -4474,9 +4514,9 @@
     "jacuzzi": false,
     "jetski": true,
     "prices": {
-      "4h": 3664,
-      "6h": 4172,
-      "8h": 4817
+      "4h": 3505,
+      "6h": 3991,
+      "8h": 4608
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -4496,8 +4536,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1897,
-      "6h": 2277
+      "4h": 1815,
+      "6h": 2178,
+      "8h": 3025
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -4568,8 +4609,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1380,
-      "6h": 1840
+      "4h": 1320,
+      "6h": 1760,
+      "8h": 2200
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -4589,9 +4631,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1495,
-      "6h": 2070,
-      "8h": 2760
+      "4h": 1430,
+      "6h": 1980,
+      "8h": 2640
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -4636,8 +4678,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1725,
-      "6h": 2300
+      "4h": 1650,
+      "6h": 2420,
+      "8h": 2970
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -4657,9 +4700,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1725,
-      "6h": 2415,
-      "8h": 3105
+      "4h": 1650,
+      "6h": 2310,
+      "8h": 2970
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -4719,8 +4762,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1495,
-      "6h": 2185
+      "4h": 1430,
+      "6h": 2090,
+      "8h": 2383
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -4740,9 +4784,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1725,
-      "6h": 2530,
-      "8h": 3105
+      "4h": 1650,
+      "6h": 2200,
+      "8h": 2750
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -4802,9 +4846,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1092,
-      "6h": 1725,
-      "8h": 2185
+      "4h": 1045,
+      "6h": 1650,
+      "8h": 2090
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -4824,9 +4868,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1495,
-      "6h": 2070,
-      "8h": 2645
+      "4h": 1430,
+      "6h": 1980,
+      "8h": 2530
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -4846,9 +4890,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1092,
-      "6h": 1696,
-      "8h": 2185
+      "4h": 1045,
+      "6h": 1623,
+      "8h": 2090
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -4904,9 +4948,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 2300,
-      "6h": 2875,
-      "8h": 4025
+      "4h": 2200,
+      "6h": 2750,
+      "8h": 3850
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -4926,8 +4970,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1725,
-      "6h": 2300
+      "4h": 1650,
+      "6h": 2200,
+      "8h": 2750
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -4947,9 +4992,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 3220,
-      "6h": 3335,
-      "8h": 4025
+      "4h": 2970,
+      "6h": 3520,
+      "8h": 4620
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -5019,8 +5064,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 3450,
-      "6h": 4370
+      "4h": 1430,
+      "6h": 1980,
+      "8h": 2640
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -5040,7 +5086,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 4600
+      "4h": 2750,
+      "6h": 3740,
+      "8h": 4950
     },
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
@@ -5060,9 +5108,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1840,
-      "6h": 2530,
-      "8h": 3680
+      "4h": 1760,
+      "6h": 2420,
+      "8h": 3520
     },
     "category": "Motor Yacht",
     "group_label": "Up to 25 guests*",
@@ -5082,9 +5130,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 4600,
-      "6h": 5175,
-      "8h": 5750
+      "4h": 4400,
+      "6h": 4950,
+      "8h": 5500
     },
     "category": "Motor Yacht",
     "group_label": "Up to 25 guests*",
@@ -5104,9 +5152,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1495,
-      "6h": 1840,
-      "8h": 2185
+      "4h": 1760,
+      "6h": 2420,
+      "8h": 3520
     },
     "category": "Motor Yacht",
     "group_label": "Up to 25 guests*",
@@ -5144,7 +5192,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1495
+      "4h": 1760,
+      "6h": 2420,
+      "8h": 3520
     },
     "category": "Motor Yacht",
     "group_label": "Up to 25 guests*",
@@ -5164,8 +5214,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 2645,
-      "6h": 3220
+      "4h": 1760,
+      "6h": 2420,
+      "8h": 3520
     },
     "category": "Motor Yacht",
     "group_label": "Up to 25 guests*",
@@ -5217,9 +5268,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1822,
-      "6h": 2391,
-      "8h": 2846
+      "4h": 1742,
+      "6h": 2287,
+      "8h": 2722
     },
     "category": "Motor Yacht",
     "group_label": "Up to 25 guests*",
@@ -5239,9 +5290,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1840,
-      "6h": 2070,
-      "8h": 3450
+      "4h": 1760,
+      "6h": 1980,
+      "8h": 3300
     },
     "category": "Motor Yacht",
     "group_label": "Up to 25 guests*",
@@ -5261,9 +5312,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1725,
-      "6h": 2300,
-      "8h": 2530
+      "4h": 1650,
+      "6h": 2200,
+      "8h": 2420
     },
     "category": "Motor Yacht",
     "group_label": "Up to 25 guests*",
@@ -5283,9 +5334,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 4600,
-      "6h": 5175,
-      "8h": 5750
+      "4h": 4400,
+      "6h": 4950,
+      "8h": 5500
     },
     "category": "Motor Yacht",
     "group_label": "Up to 25 guests*",
@@ -5305,9 +5356,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 2530,
-      "6h": 3220,
-      "8h": 3795
+      "4h": 2420,
+      "6h": 3080,
+      "8h": 3630
     },
     "category": "Motor Yacht",
     "group_label": "Up to 25 guests*",
@@ -5327,9 +5378,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 2990,
-      "6h": 3392,
-      "8h": 3910
+      "4h": 2860,
+      "6h": 3245,
+      "8h": 3740
     },
     "category": "Motor Yacht",
     "group_label": "Up to 25 guests*",
@@ -5349,9 +5400,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 3220,
-      "6h": 3680,
-      "8h": 4945
+      "4h": 3080,
+      "6h": 3520,
+      "8h": 4730
     },
     "category": "Motor Yacht",
     "group_label": "Up to 25 guests*",
@@ -5371,9 +5422,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 3795,
-      "6h": 4485,
-      "8h": 5175
+      "4h": 3630,
+      "6h": 4290,
+      "8h": 4950
     },
     "category": "Motor Yacht",
     "group_label": "Up to 25 guests*",
@@ -5393,9 +5444,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1495,
-      "6h": 1955,
-      "8h": 2530
+      "4h": 1430,
+      "6h": 1870,
+      "8h": 2420
     },
     "category": "Motor Yacht",
     "group_label": "Up to 25 guests*",
@@ -5462,8 +5513,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1725,
-      "6h": 2300
+      "4h": 1650,
+      "6h": 2200,
+      "8h": 2750
     },
     "category": "Motor Yacht",
     "group_label": "Up to 25 guests*",
@@ -5483,8 +5535,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1840,
-      "6h": 2300
+      "4h": 1760,
+      "6h": 2200,
+      "8h": 2933
     },
     "category": "Motor Yacht",
     "group_label": "Up to 25 guests*",
@@ -5504,9 +5557,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 2530,
-      "6h": 3220,
-      "8h": 3795
+      "4h": 2420,
+      "6h": 3080,
+      "8h": 3630
     },
     "category": "Motor Yacht",
     "group_label": "Up to 25 guests*",
@@ -5526,9 +5579,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 2530,
-      "6h": 3220,
-      "8h": 3910
+      "4h": 2420,
+      "6h": 3080,
+      "8h": 3740
     },
     "category": "Motor Yacht",
     "group_label": "Up to 25 guests*",
@@ -5592,8 +5645,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1840,
-      "6h": 2415
+      "4h": 1760,
+      "6h": 2310,
+      "8h": 2933
     },
     "category": "Motor Yacht",
     "group_label": "Up to 25 guests*",
@@ -5613,7 +5667,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "6h": 2070
+      "4h": 1531,
+      "6h": 1980,
+      "8h": 2552
     },
     "category": "Motor Yacht",
     "group_label": "Up to 25 guests*",
@@ -5643,8 +5699,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 2300,
-      "6h": 2990
+      "4h": 1531,
+      "6h": 1980,
+      "8h": 2552
     },
     "category": "Motor Yacht",
     "group_label": "Up to 25 guests*",
@@ -5711,9 +5768,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 2990,
-      "6h": 3737,
-      "8h": 4485
+      "4h": 2750,
+      "6h": 3231,
+      "8h": 3960
     },
     "category": "Motor Yacht",
     "group_label": "Up to 25 guests*",
@@ -5733,9 +5790,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 5750,
-      "6h": 6900,
-      "8h": 8050
+      "4h": 3630,
+      "6h": 4290,
+      "8h": 4950
     },
     "category": "Motor Yacht",
     "group_label": "Up to 25 guests*",
@@ -5755,8 +5812,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 3105,
-      "6h": 4025
+      "4h": 1650,
+      "6h": 2200,
+      "8h": 2750
     },
     "category": "Motor Yacht",
     "group_label": "Up to 25 guests*",
@@ -5827,8 +5885,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 3220,
-      "6h": 4140
+      "4h": 1650,
+      "6h": 2200,
+      "8h": 2750
     },
     "category": "Motor Yacht",
     "group_label": "Up to 25 guests*",
@@ -5866,9 +5925,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 3220,
-      "6h": 4025,
-      "8h": 4600
+      "4h": 3080,
+      "6h": 3850,
+      "8h": 4400
     },
     "category": "Motor Yacht",
     "group_label": "Up to 25 guests*",
@@ -5888,9 +5947,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 2484,
-      "6h": 3174,
-      "8h": 3864
+      "4h": 2376,
+      "6h": 3036,
+      "8h": 3696
     },
     "category": "Motor Yacht",
     "group_label": "Up to 25 guests*",
@@ -5910,9 +5969,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 2645,
-      "6h": 3450,
-      "8h": 4485
+      "4h": 2750,
+      "6h": 3850,
+      "8h": 4730
     },
     "category": "Motor Yacht",
     "group_label": "Up to 25 guests*",
@@ -5932,9 +5991,9 @@
     "jacuzzi": false,
     "jetski": true,
     "prices": {
-      "4h": 2875,
-      "6h": 3450,
-      "8h": 4025
+      "4h": 2750,
+      "6h": 3850,
+      "8h": 4730
     },
     "category": "Motor Yacht",
     "group_label": "Up to 25 guests*",
@@ -6189,9 +6248,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 3162,
-      "6h": 4312,
-      "8h": 5462
+      "4h": 2750,
+      "6h": 3300,
+      "8h": 3850
     },
     "category": "Motor Yacht",
     "group_label": "Up to 25 guests*",
@@ -6211,9 +6270,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 2990,
-      "6h": 3680,
-      "8h": 4370
+      "4h": 2860,
+      "6h": 3520,
+      "8h": 4180
     },
     "category": "Motor Yacht",
     "group_label": "Up to 25 guests*",
@@ -6233,9 +6292,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 3185,
-      "6h": 4002,
-      "8h": 4853
+      "4h": 3047,
+      "6h": 3828,
+      "8h": 4642
     },
     "category": "Motor Yacht",
     "group_label": "Up to 25 guests*",
@@ -6255,9 +6314,9 @@
     "jacuzzi": false,
     "jetski": true,
     "prices": {
-      "4h": 3852,
-      "6h": 4600,
-      "8h": 5348
+      "4h": 3685,
+      "6h": 4400,
+      "8h": 5115
     },
     "category": "Motor Yacht",
     "group_label": "Up to 25 guests*",
@@ -6296,9 +6355,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 4347,
-      "6h": 5175,
-      "8h": 6003
+      "4h": 4158,
+      "6h": 4950,
+      "8h": 5742
     },
     "category": "Motor Yacht",
     "group_label": "Up to 25 guests*",
@@ -6318,9 +6377,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 4692,
-      "6h": 5520,
-      "8h": 6348
+      "4h": 4488,
+      "6h": 5280,
+      "8h": 6072
     },
     "category": "Motor Yacht",
     "group_label": "Up to 25 guests*",
@@ -6340,9 +6399,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 2875,
-      "6h": 4025,
-      "8h": 4945
+      "4h": 2530,
+      "6h": 3300,
+      "8h": 4290
     },
     "category": "Motor Yacht",
     "group_label": "Up to 25 guests*",
@@ -6362,9 +6421,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 3680,
-      "6h": 5060,
-      "8h": 6900
+      "4h": 3520,
+      "6h": 4840,
+      "8h": 6600
     },
     "category": "Motor Yacht",
     "group_label": "Up to 25 guests*",
@@ -6384,9 +6443,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 3220,
-      "6h": 4830,
-      "8h": 6440
+      "4h": 3080,
+      "6h": 4620,
+      "8h": 6160
     },
     "category": "Motor Yacht",
     "group_label": "Up to 25 guests*",
@@ -6406,8 +6465,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1840,
-      "6h": 2588
+      "4h": 1760,
+      "6h": 2475,
+      "8h": 2933
     },
     "category": "Motor Yacht",
     "group_label": "Up to 25 guests*",
@@ -6427,9 +6487,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 2530,
-      "6h": 3220,
-      "8h": 3910
+      "4h": 2420,
+      "6h": 3080,
+      "8h": 3740
     },
     "category": "Motor Yacht",
     "group_label": "Up to 25 guests*",
@@ -6449,9 +6509,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 2990,
-      "6h": 3737,
-      "8h": 4485
+      "4h": 1760,
+      "6h": 2475,
+      "8h": 2933
     },
     "category": "Motor Yacht",
     "group_label": "Up to 25 guests*",
@@ -6471,9 +6531,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 3335,
-      "6h": 3680,
-      "8h": 4600
+      "4h": 3025,
+      "6h": 4125,
+      "8h": 5225
     },
     "category": "Motor Yacht",
     "group_label": "Up to 25 guests*",
@@ -6547,7 +6607,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "6h": 5200
+      "4h": 2860,
+      "6h": 3520,
+      "8h": 4180
     },
     "category": "Motor Yacht",
     "group_label": "Up to 25 guests*",
@@ -6621,7 +6683,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "6h": 5000
+      "4h": 2420,
+      "6h": 3080,
+      "8h": 3740
     },
     "category": "Motor Yacht",
     "group_label": "Up to 25 guests*",
@@ -6695,9 +6759,9 @@
     "jacuzzi": false,
     "jetski": true,
     "prices": {
-      "4h": 2472,
-      "6h": 2760,
-      "8h": 3622
+      "4h": 2365,
+      "6h": 2640,
+      "8h": 3465
     },
     "category": "Motor Yacht",
     "group_label": "Up to 25 guests*",
@@ -6717,9 +6781,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 3565,
-      "6h": 3967,
-      "8h": 4370
+      "4h": 3410,
+      "6h": 3795,
+      "8h": 4180
     },
     "category": "Motor Yacht",
     "group_label": "Up to 25 guests*",
@@ -6739,9 +6803,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 4600,
-      "6h": 5750,
-      "8h": 6900
+      "4h": 2365,
+      "6h": 2640,
+      "8h": 3465
     },
     "category": "Motor Yacht",
     "group_label": "Up to 25 guests*",
@@ -6761,9 +6825,9 @@
     "jacuzzi": false,
     "jetski": true,
     "prices": {
-      "4h": 2852,
-      "6h": 3111,
-      "8h": 3640
+      "4h": 2728,
+      "6h": 2976,
+      "8h": 3482
     },
     "category": "Motor Yacht",
     "group_label": "Up to 25 guests*",
@@ -6783,9 +6847,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 2875,
-      "6h": 3450,
-      "8h": 4025
+      "4h": 2750,
+      "6h": 3300,
+      "8h": 3850
     },
     "category": "Motor Yacht",
     "group_label": "Up to 25 guests*",
@@ -6805,8 +6869,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 2990,
-      "6h": 3795
+      "4h": 2860,
+      "6h": 3630,
+      "8h": 4767
     },
     "category": "Motor Yacht",
     "group_label": "Up to 25 guests*",
@@ -6826,9 +6891,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1725,
-      "6h": 2300,
-      "8h": 2875
+      "4h": 1650,
+      "6h": 2200,
+      "8h": 2750
     },
     "category": "Motor Yacht",
     "group_label": "Up to 25 guests*",
@@ -6872,9 +6937,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 2530,
-      "6h": 3680,
-      "8h": 4830
+      "4h": 2420,
+      "6h": 3520,
+      "8h": 4620
     },
     "category": "Motor Yacht",
     "group_label": "Up to 25 guests*",
@@ -6894,9 +6959,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 2530,
-      "6h": 3680,
-      "8h": 4830
+      "4h": 3850,
+      "6h": 4950,
+      "8h": 4950
     },
     "category": "Motor Yacht",
     "group_label": "Up to 25 guests*",
@@ -6916,9 +6981,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 2358,
-      "6h": 2760,
-      "8h": 3450
+      "4h": 2255,
+      "6h": 2640,
+      "8h": 3300
     },
     "category": "Motor Yacht",
     "group_label": "Up to 25 guests*",
@@ -6962,9 +7027,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 3680,
-      "6h": 4830,
-      "8h": 7360
+      "4h": 3520,
+      "6h": 4620,
+      "8h": 7040
     },
     "category": "Motor Yacht",
     "group_label": "Up to 25 guests*",
@@ -6984,9 +7049,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 4324,
-      "6h": 5014,
-      "8h": 8648
+      "4h": 4136,
+      "6h": 4796,
+      "8h": 8272
     },
     "category": "Motor Yacht",
     "group_label": "Up to 25 guests*",
@@ -7006,9 +7071,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1840,
-      "6h": 2530,
-      "8h": 3450
+      "4h": 4136,
+      "6h": 4796,
+      "8h": 8272
     },
     "category": "Motor Yacht",
     "group_label": "Up to 25 guests*",
@@ -7079,9 +7144,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1840,
-      "6h": 2530,
-      "8h": 3450
+      "4h": 1760,
+      "6h": 2420,
+      "8h": 3300
     },
     "category": "Motor Yacht",
     "group_label": "Up to 25 guests*",
@@ -7119,8 +7184,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1438,
-      "6h": 1897
+      "4h": 1375,
+      "6h": 1815,
+      "8h": 2292
     },
     "category": "Motor Yacht",
     "group_label": "Up to 25 guests*",
@@ -7140,9 +7206,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 4025,
-      "6h": 5175,
-      "8h": 5175
+      "4h": 3850,
+      "6h": 4950,
+      "8h": 4950
     },
     "category": "Motor Yacht",
     "group_label": "Up to 25 guests*",
@@ -7188,9 +7254,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1840,
-      "6h": 2300,
-      "8h": 4025
+      "4h": 1760,
+      "6h": 2200,
+      "8h": 3850
     },
     "category": "Motor Yacht",
     "group_label": "Up to 25 guests*",
@@ -7210,9 +7276,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 2530,
-      "6h": 3220,
-      "8h": 3910
+      "4h": 2420,
+      "6h": 3080,
+      "8h": 3740
     },
     "category": "Luxury Yacht",
     "group_label": "Up to 25 guests*",
@@ -7232,9 +7298,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 3335,
-      "6h": 3910,
-      "8h": 4485
+      "4h": 3190,
+      "6h": 3740,
+      "8h": 4290
     },
     "category": "Luxury Yacht",
     "group_label": "Up to 25 guests*",
@@ -7254,9 +7320,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 3795,
-      "6h": 5060,
-      "8h": 6325
+      "4h": 3630,
+      "6h": 4840,
+      "8h": 6050
     },
     "category": "Luxury Yacht",
     "group_label": "Up to 25 guests*",
@@ -7276,9 +7342,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 4312,
-      "6h": 4888,
-      "8h": 5462
+      "4h": 4125,
+      "6h": 4675,
+      "8h": 5225
     },
     "category": "Luxury Yacht",
     "group_label": "Up to 25 guests*",
@@ -7298,9 +7364,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 4830,
-      "6h": 5520,
-      "8h": 6210
+      "4h": 4620,
+      "6h": 5280,
+      "8h": 5940
     },
     "category": "Luxury Yacht",
     "group_label": "Up to 25 guests*",
@@ -7320,9 +7386,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 5299,
-      "6h": 6293,
-      "8h": 7452
+      "4h": 5069,
+      "6h": 6019,
+      "8h": 7128
     },
     "category": "Luxury Yacht",
     "group_label": "Up to 25 guests*",
@@ -7356,7 +7422,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 4830
+      "4h": 4620,
+      "6h": 5973,
+      "8h": 7700
     },
     "category": "Luxury Yacht",
     "group_label": "Up to 25 guests*",
@@ -7376,9 +7444,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 2300,
-      "6h": 2875,
-      "8h": 4025
+      "4h": 5069,
+      "6h": 6019,
+      "8h": 7128
     },
     "category": "Luxury Yacht",
     "group_label": "Up to 25 guests*",
@@ -7398,8 +7466,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 1725,
-      "6h": 2300
+      "4h": 4620,
+      "6h": 5280,
+      "8h": 5940
     },
     "category": "Luxury Yacht",
     "group_label": "Up to 25 guests*",
@@ -7419,7 +7488,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "6h": 7500
+      "4h": 3630,
+      "6h": 4840,
+      "8h": 6050
     },
     "category": "Luxury Yacht",
     "group_label": "Up to 25 guests*",
@@ -7439,9 +7510,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 2875,
-      "6h": 3450,
-      "8h": 4255
+      "4h": 2750,
+      "6h": 3300,
+      "8h": 4070
     },
     "category": "Luxury Yacht",
     "group_label": "Up to 25 guests*",
@@ -7461,9 +7532,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 2875,
-      "6h": 3565,
-      "8h": 4370
+      "4h": 2750,
+      "6h": 3410,
+      "8h": 4180
     },
     "category": "Luxury Yacht",
     "group_label": "Up to 25 guests*",
@@ -7483,9 +7554,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 2990,
-      "6h": 3910,
-      "8h": 4830
+      "4h": 2860,
+      "6h": 3740,
+      "8h": 4620
     },
     "category": "Luxury Yacht",
     "group_label": "Up to 25 guests*",
@@ -7505,9 +7576,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 2990,
-      "6h": 4312,
-      "8h": 5175
+      "4h": 2860,
+      "6h": 4125,
+      "8h": 4950
     },
     "category": "Luxury Yacht",
     "group_label": "Up to 25 guests*",
@@ -7555,9 +7626,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 3277,
-      "6h": 3967,
-      "8h": 4715
+      "4h": 3135,
+      "6h": 3795,
+      "8h": 4510
     },
     "category": "Luxury Yacht",
     "group_label": "Up to 25 guests*",
@@ -7602,9 +7673,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 3737,
-      "6h": 5606,
-      "8h": 7475
+      "4h": 3575,
+      "6h": 5362,
+      "8h": 7150
     },
     "category": "Luxury Yacht",
     "group_label": "Up to 25 guests*",
@@ -7624,9 +7695,9 @@
     "jacuzzi": false,
     "jetski": true,
     "prices": {
-      "4h": 4025,
-      "6h": 5175,
-      "8h": 6325
+      "4h": 3850,
+      "6h": 4950,
+      "8h": 6050
     },
     "category": "Luxury Yacht",
     "group_label": "Up to 25 guests*",
@@ -8191,8 +8262,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 4025,
-      "6h": 4830
+      "4h": 3850,
+      "6h": 4620,
+      "8h": 6417
     },
     "category": "Luxury Yacht",
     "group_label": "Up to 25 guests*",
@@ -8212,9 +8284,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 2645,
-      "6h": 3795,
-      "8h": 4945
+      "4h": 2530,
+      "6h": 3630,
+      "8h": 4730
     },
     "category": "Luxury Yacht",
     "group_label": "Up to 25 guests*",
@@ -8234,9 +8306,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 2012,
-      "6h": 2818,
-      "8h": 3507
+      "4h": 2860,
+      "6h": 4125,
+      "8h": 4950
     },
     "category": "Luxury Yacht",
     "group_label": "Up to 25 guests*",
@@ -8256,9 +8328,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 2760,
-      "6h": 3967,
-      "8h": 4715
+      "4h": 2640,
+      "6h": 3795,
+      "8h": 4510
     },
     "category": "Luxury Yacht",
     "group_label": "Up to 25 guests*",
@@ -8306,9 +8378,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 8050,
-      "6h": 9200,
-      "8h": 11500
+      "4h": 3850,
+      "6h": 4950,
+      "8h": 6050
     },
     "category": "Luxury Yacht",
     "group_label": "Up to 25 guests*",
@@ -8328,9 +8400,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 3795,
-      "6h": 5060,
-      "8h": 6325
+      "4h": 3630,
+      "6h": 4840,
+      "8h": 6050
     },
     "category": "Luxury Yacht",
     "group_label": "Up to 30 guests*",
@@ -8350,7 +8422,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 4600
+      "4h": 4400,
+      "6h": 5689,
+      "8h": 7333
     },
     "category": "Luxury Yacht",
     "group_label": "Up to 30 guests*",
@@ -8370,9 +8444,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 3795,
-      "6h": 4485,
-      "8h": 5175
+      "4h": 3630,
+      "6h": 4290,
+      "8h": 4950
     },
     "category": "Luxury Yacht",
     "group_label": "Up to 30 guests*",
@@ -8392,9 +8466,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 4830,
-      "6h": 5520,
-      "8h": 9660
+      "4h": 4620,
+      "6h": 5280,
+      "8h": 9240
     },
     "category": "Luxury Yacht",
     "group_label": "Up to 30 guests*",
@@ -8414,9 +8488,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 5290,
-      "6h": 6440,
-      "8h": 7475
+      "4h": 5060,
+      "6h": 6160,
+      "8h": 7150
     },
     "category": "Luxury Yacht",
     "group_label": "Up to 30 guests*",
@@ -8436,9 +8510,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 4025,
-      "6h": 4830,
-      "8h": 5635
+      "4h": 3850,
+      "6h": 4620,
+      "8h": 5390
     },
     "category": "Luxury Yacht",
     "group_label": "Up to 30 guests*",
@@ -8477,9 +8551,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 2910,
-      "6h": 4232,
-      "8h": 5554
+      "4h": 2783,
+      "6h": 4048,
+      "8h": 5313
     },
     "category": "Luxury Yacht",
     "group_label": "Up to 30 guests*",
@@ -8499,9 +8573,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 2875,
-      "6h": 4025,
-      "8h": 5175
+      "4h": 2750,
+      "6h": 3850,
+      "8h": 4950
     },
     "category": "Luxury Yacht",
     "group_label": "Up to 30 guests*",
@@ -8521,9 +8595,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 3450,
-      "6h": 4140,
-      "8h": 5175
+      "4h": 2750,
+      "6h": 3850,
+      "8h": 4950
     },
     "category": "Luxury Yacht",
     "group_label": "Up to 30 guests*",
@@ -8566,9 +8640,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 4312,
-      "6h": 4888,
-      "8h": 5462
+      "4h": 4125,
+      "6h": 4675,
+      "8h": 5225
     },
     "category": "Luxury Yacht",
     "group_label": "Up to 30 guests*",
@@ -8588,9 +8662,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 3450,
-      "6h": 4025,
-      "8h": 4830
+      "4h": 3300,
+      "6h": 3850,
+      "8h": 4620
     },
     "category": "Luxury Yacht",
     "group_label": "Up to 30 guests*",
@@ -8610,7 +8684,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "6h": 8000
+      "4h": 2750,
+      "6h": 3850,
+      "8h": 4950
     },
     "category": "Luxury Yacht",
     "group_label": "Up to 30 guests*",
@@ -8630,9 +8706,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 3737,
-      "6h": 4600,
-      "8h": 5750
+      "4h": 3575,
+      "6h": 4400,
+      "8h": 5500
     },
     "category": "Luxury Yacht",
     "group_label": "Up to 30 guests*",
@@ -8652,9 +8728,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 4025,
-      "6h": 5175,
-      "8h": 6325
+      "4h": 3850,
+      "6h": 4950,
+      "8h": 6050
     },
     "category": "Luxury Yacht",
     "group_label": "Up to 30 guests*",
@@ -8674,9 +8750,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 2875,
-      "6h": 3450,
-      "8h": 4140
+      "4h": 2750,
+      "6h": 3300,
+      "8h": 3960
     },
     "category": "Luxury Yacht",
     "group_label": "Up to 30 guests*",
@@ -8696,9 +8772,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 5405,
-      "6h": 7935,
-      "8h": 10465
+      "4h": 5170,
+      "6h": 7590,
+      "8h": 10010
     },
     "category": "Luxury Yacht",
     "group_label": "Up to 30 guests*",
@@ -8718,9 +8794,9 @@
     "jacuzzi": true,
     "jetski": false,
     "prices": {
-      "4h": 5060,
-      "6h": 6210,
-      "8h": 7360
+      "4h": 4840,
+      "6h": 5940,
+      "8h": 7040
     },
     "category": "Luxury Yacht",
     "group_label": "Up to 30 guests*",
@@ -8740,9 +8816,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 6785,
-      "6h": 7935,
-      "8h": 9085
+      "4h": 6490,
+      "6h": 7590,
+      "8h": 8690
     },
     "category": "Luxury Yacht",
     "group_label": "Up to 30 guests*",
@@ -8762,9 +8838,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 2875,
-      "6h": 3450,
-      "8h": 5175
+      "4h": 2750,
+      "6h": 3300,
+      "8h": 4950
     },
     "category": "Luxury Yacht",
     "group_label": "Up to 30 guests*",
@@ -8835,9 +8911,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 3737,
-      "6h": 4888,
-      "8h": 6037
+      "4h": 3575,
+      "6h": 4675,
+      "8h": 5775
     },
     "category": "Luxury Yacht",
     "group_label": "Up to 30 guests*",
@@ -8857,9 +8933,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 3680,
-      "6h": 4600,
-      "8h": 5405
+      "4h": 3520,
+      "6h": 4400,
+      "8h": 5170
     },
     "category": "Luxury Yacht",
     "group_label": "Up to 30 guests*",
@@ -8879,9 +8955,9 @@
     "jacuzzi": false,
     "jetski": true,
     "prices": {
-      "4h": 5750,
-      "6h": 6900,
-      "8h": 8050
+      "4h": 5500,
+      "6h": 6600,
+      "8h": 7700
     },
     "category": "Luxury Yacht",
     "group_label": "Up to 30 guests*",
@@ -8925,9 +9001,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 6095,
-      "6h": 7705,
-      "8h": 9430
+      "4h": 5830,
+      "6h": 7370,
+      "8h": 9020
     },
     "category": "Luxury Yacht",
     "group_label": "Up to 30 guests*",
@@ -8947,9 +9023,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 2530,
-      "6h": 3220,
-      "8h": 3910
+      "4h": 2420,
+      "6h": 3080,
+      "8h": 3740
     },
     "category": "Luxury Yacht",
     "group_label": "Up to 30 guests*",
@@ -8969,8 +9045,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 5405,
-      "6h": 6325
+      "4h": 3575,
+      "6h": 4675,
+      "8h": 5775
     },
     "category": "Luxury Yacht",
     "group_label": "Up to 30 guests*",
@@ -8990,8 +9067,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 7475,
-      "6h": 9200
+      "4h": 2750,
+      "6h": 3300,
+      "8h": 4950
     },
     "category": "Luxury Yacht",
     "group_label": "Up to 30 guests*",
@@ -9062,7 +9140,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "6h": 4500
+      "4h": 2420,
+      "6h": 3080,
+      "8h": 3740
     },
     "category": "Luxury Yacht",
     "group_label": "Up to 30 guests*",
@@ -9133,9 +9213,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 3449,
-      "6h": 4140,
-      "8h": 4830
+      "4h": 3299,
+      "6h": 3960,
+      "8h": 4620
     },
     "category": "Luxury Yacht",
     "group_label": "Up to 30 guests*",
@@ -9155,9 +9235,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 5635,
-      "6h": 6785,
-      "8h": 7935
+      "4h": 5390,
+      "6h": 6490,
+      "8h": 7590
     },
     "category": "Luxury Yacht",
     "group_label": "Up to 30 guests*",
@@ -9177,7 +9257,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 2875
+      "4h": 2750,
+      "6h": 3555,
+      "8h": 4583
     },
     "category": "Luxury Yacht",
     "group_label": "Up to 30 guests*",
@@ -9197,9 +9279,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 5175,
-      "6h": 6210,
-      "8h": 7245
+      "4h": 3299,
+      "6h": 3960,
+      "8h": 4620
     },
     "category": "Luxury Yacht",
     "group_label": "Up to 30 guests*",
@@ -9219,9 +9301,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 4140,
-      "6h": 6210,
-      "8h": 6900
+      "4h": 3960,
+      "6h": 5940,
+      "8h": 6600
     },
     "category": "Luxury Yacht",
     "group_label": "Up to 30 guests*",
@@ -9253,9 +9335,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 3105,
-      "6h": 3565,
-      "8h": 4025
+      "4h": 2970,
+      "6h": 3410,
+      "8h": 3850
     },
     "category": "Luxury Yacht",
     "group_label": "Up to 30 guests*",
@@ -9275,9 +9357,9 @@
     "jacuzzi": true,
     "jetski": true,
     "prices": {
-      "4h": 4888,
-      "6h": 5578,
-      "8h": 6152
+      "4h": 4675,
+      "6h": 5335,
+      "8h": 5885
     },
     "category": "Luxury Yacht",
     "group_label": "Up to 30 guests*",
@@ -9297,9 +9379,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 3795,
-      "6h": 5175,
-      "8h": 6325
+      "4h": 3630,
+      "6h": 4950,
+      "8h": 6050
     },
     "category": "Luxury Yacht",
     "group_label": "Up to 30 guests*",
@@ -9319,9 +9401,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 3935,
-      "6h": 4478,
-      "8h": 5157
+      "4h": 3764,
+      "6h": 4283,
+      "8h": 4932
     },
     "category": "Luxury Yacht",
     "group_label": "Up to 30 guests*",
@@ -9341,9 +9423,9 @@
     "jacuzzi": true,
     "jetski": true,
     "prices": {
-      "4h": 5980,
-      "6h": 7130,
-      "8h": 8280
+      "4h": 5720,
+      "6h": 6820,
+      "8h": 7920
     },
     "category": "Luxury Yacht",
     "group_label": "Up to 30 guests*",
@@ -9376,9 +9458,9 @@
     "jacuzzi": false,
     "jetski": true,
     "prices": {
-      "4h": 6095,
-      "6h": 7130,
-      "8h": 8050
+      "4h": 5830,
+      "6h": 6820,
+      "8h": 7700
     },
     "category": "Luxury Yacht",
     "group_label": "Up to 30 guests*",
@@ -9398,9 +9480,9 @@
     "jacuzzi": false,
     "jetski": true,
     "prices": {
-      "4h": 6095,
-      "6h": 7130,
-      "8h": 8050
+      "4h": 5830,
+      "6h": 6820,
+      "8h": 7700
     },
     "category": "Luxury Yacht",
     "group_label": "Up to 30 guests*",
@@ -9420,9 +9502,9 @@
     "jacuzzi": true,
     "jetski": false,
     "prices": {
-      "4h": 5290,
-      "6h": 6440,
-      "8h": 7475
+      "4h": 5060,
+      "6h": 6160,
+      "8h": 7150
     },
     "category": "Luxury Yacht",
     "group_label": "Up to 30 guests*",
@@ -9465,9 +9547,9 @@
     "jacuzzi": false,
     "jetski": true,
     "prices": {
-      "4h": 14950,
-      "6h": 14950,
-      "8h": 14950
+      "4h": 14300,
+      "6h": 14300,
+      "8h": 14300
     },
     "category": "Luxury Yacht",
     "group_label": "Up to 30 guests*",
@@ -9528,9 +9610,9 @@
     "jacuzzi": true,
     "jetski": false,
     "prices": {
-      "4h": 10120,
-      "6h": 12420,
-      "8h": 14720
+      "4h": 9680,
+      "6h": 11880,
+      "8h": 14080
     },
     "category": "Luxury Yacht",
     "group_label": "Up to 30 guests*",
@@ -9550,7 +9632,9 @@
     "jacuzzi": true,
     "jetski": false,
     "prices": {
-      "8h": 6957
+      "4h": 3993,
+      "6h": 5162,
+      "8h": 6655
     },
     "category": "Luxury Yacht",
     "group_label": "Up to 30 guests*",
@@ -9570,9 +9654,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 5290,
-      "6h": 6440,
-      "8h": 7475
+      "4h": 5060,
+      "6h": 6160,
+      "8h": 7150
     },
     "category": "Luxury Yacht",
     "group_label": "Up to 30 guests*",
@@ -9616,9 +9700,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 10120,
-      "6h": 12075,
-      "8h": 14490
+      "4h": 9680,
+      "6h": 11550,
+      "8h": 13860
     },
     "category": "Luxury Yacht",
     "group_label": "Up to 30 guests*",
@@ -9638,9 +9722,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 5980,
-      "6h": 8609,
-      "8h": 10541
+      "4h": 5720,
+      "6h": 8235,
+      "8h": 10083
     },
     "category": "Luxury Yacht",
     "group_label": "Up to 30 guests*",
@@ -9660,8 +9744,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 4600,
-      "6h": 6440
+      "4h": 5720,
+      "6h": 8235,
+      "8h": 10083
     },
     "category": "Luxury Yacht",
     "group_label": "Up to 30 guests*",
@@ -9681,7 +9766,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "6h": 10000
+      "4h": 4400,
+      "6h": 6160,
+      "8h": 7333
     },
     "category": "Luxury Yacht",
     "group_label": "Up to 30 guests*",
@@ -9701,9 +9788,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 8798,
-      "6h": 10752,
-      "8h": 12219
+      "4h": 8415,
+      "6h": 10285,
+      "8h": 11688
     },
     "category": "Superyacht",
     "group_label": "Up to 40 guests*",
@@ -9748,9 +9835,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 6325,
-      "6h": 8280,
-      "8h": 10235
+      "4h": 6050,
+      "6h": 7920,
+      "8h": 9790
     },
     "category": "Superyacht",
     "group_label": "Up to 40 guests*",
@@ -9770,9 +9857,9 @@
     "jacuzzi": true,
     "jetski": false,
     "prices": {
-      "4h": 5520,
-      "6h": 6670,
-      "8h": 8050
+      "4h": 5280,
+      "6h": 6380,
+      "8h": 7700
     },
     "category": "Superyacht",
     "group_label": "Up to 40 guests*",
@@ -9792,9 +9879,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 6900,
-      "6h": 8625,
-      "8h": 10350
+      "4h": 6600,
+      "6h": 8250,
+      "8h": 9900
     },
     "category": "Superyacht",
     "group_label": "Up to 40 guests*",
@@ -9814,9 +9901,9 @@
     "jacuzzi": true,
     "jetski": false,
     "prices": {
-      "4h": 4485,
-      "6h": 5750,
-      "8h": 7130
+      "4h": 4290,
+      "6h": 5500,
+      "8h": 6820
     },
     "category": "Superyacht",
     "group_label": "Up to 40 guests*",
@@ -9836,8 +9923,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 10350,
-      "6h": 11500
+      "4h": 5280,
+      "6h": 6380,
+      "8h": 7700
     },
     "category": "Superyacht",
     "group_label": "Up to 40 guests*",
@@ -9857,7 +9945,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "6h": 9000
+      "4h": 4290,
+      "6h": 5500,
+      "8h": 6820
     },
     "category": "Superyacht",
     "group_label": "Up to 40 guests*",
@@ -9877,9 +9967,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 10062,
-      "6h": 11500,
-      "8h": 14375
+      "4h": 9625,
+      "6h": 11000,
+      "8h": 13750
     },
     "category": "Superyacht",
     "group_label": "Up to 40 guests*",
@@ -9899,9 +9989,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 7762,
-      "6h": 9085,
-      "8h": 11500
+      "4h": 7425,
+      "6h": 8690,
+      "8h": 11000
     },
     "category": "Superyacht",
     "group_label": "Up to 40 guests*",
@@ -10029,9 +10119,9 @@
     "jacuzzi": true,
     "jetski": false,
     "prices": {
-      "4h": 5175,
-      "6h": 5750,
-      "8h": 6325
+      "4h": 4950,
+      "6h": 5500,
+      "8h": 6050
     },
     "category": "Superyacht",
     "group_label": "Up to 40 guests*",
@@ -10051,9 +10141,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 5750,
-      "6h": 6900,
-      "8h": 9200
+      "4h": 5500,
+      "6h": 6600,
+      "8h": 8800
     },
     "category": "Superyacht",
     "group_label": "Up to 40 guests*",
@@ -10073,9 +10163,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 7590,
-      "6h": 8970,
-      "8h": 11730
+      "4h": 7260,
+      "6h": 8580,
+      "8h": 11220
     },
     "category": "Superyacht",
     "group_label": "Up to 40 guests*",
@@ -10105,9 +10195,9 @@
     "jacuzzi": true,
     "jetski": true,
     "prices": {
-      "4h": 10350,
-      "6h": 12075,
-      "8h": 13800
+      "4h": 9900,
+      "6h": 11550,
+      "8h": 13200
     },
     "category": "Superyacht",
     "group_label": "Up to 40 guests*",
@@ -10127,9 +10217,9 @@
     "jacuzzi": true,
     "jetski": true,
     "prices": {
-      "4h": 7820,
-      "6h": 8970,
-      "8h": 13225
+      "4h": 7480,
+      "6h": 8580,
+      "8h": 12650
     },
     "category": "Superyacht",
     "group_label": "Up to 40 guests*",
@@ -10149,7 +10239,9 @@
     "jacuzzi": true,
     "jetski": true,
     "prices": {
-      "8h": 10752
+      "4h": 6006,
+      "6h": 8220,
+      "8h": 10430
     },
     "category": "Superyacht",
     "group_label": "Up to 40 guests*",
@@ -10169,9 +10261,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 6900,
-      "6h": 10350,
-      "8h": 13340
+      "4h": 6600,
+      "6h": 9900,
+      "8h": 12760
     },
     "category": "Superyacht",
     "group_label": "Up to 40 guests*",
@@ -10217,9 +10309,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 6900,
-      "6h": 10350,
-      "8h": 13340
+      "4h": 6600,
+      "6h": 9900,
+      "8h": 12760
     },
     "category": "Superyacht",
     "group_label": "Up to 40 guests*",
@@ -10239,9 +10331,9 @@
     "jacuzzi": true,
     "jetski": true,
     "prices": {
-      "4h": 5750,
-      "6h": 6900,
-      "8h": 8050
+      "4h": 5500,
+      "6h": 6600,
+      "8h": 7700
     },
     "category": "Superyacht",
     "group_label": "Up to 40 guests*",
@@ -10261,9 +10353,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 5750,
-      "6h": 8050,
-      "8h": 10350
+      "4h": 5500,
+      "6h": 7700,
+      "8h": 9900
     },
     "category": "Superyacht",
     "group_label": "Up to 40 guests*",
@@ -10283,9 +10375,9 @@
     "jacuzzi": true,
     "jetski": true,
     "prices": {
-      "4h": 14605,
-      "6h": 14605,
-      "8h": 16675
+      "4h": 13970,
+      "6h": 13970,
+      "8h": 15950
     },
     "category": "Superyacht",
     "group_label": "Up to 40 guests*",
@@ -10330,9 +10422,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 11500,
-      "6h": 13800,
-      "8h": 16100
+      "4h": 11000,
+      "6h": 13200,
+      "8h": 15400
     },
     "category": "Superyacht",
     "group_label": "Up to 40 guests*",
@@ -10377,7 +10469,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "8h": 18515
+      "4h": 10626,
+      "6h": 13738,
+      "8h": 17710
     },
     "category": "Superyacht",
     "group_label": "Up to 40 guests*",
@@ -10397,9 +10491,9 @@
     "jacuzzi": false,
     "jetski": false,
     "prices": {
-      "4h": 8912,
-      "6h": 10062,
-      "8h": 11212
+      "4h": 8525,
+      "6h": 9625,
+      "8h": 10725
     },
     "category": "Superyacht",
     "group_label": "Up to 40 guests*",
