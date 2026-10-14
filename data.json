@@ -580,14 +580,8 @@
     "category": "Sport Yacht",
     "group_label": "Up to 13 guests*",
     "capacity": 13,
-    "photo": "photos/b93c036dd9-1.jpg",
-    "photos": [
-      "photos/b93c036dd9-1.jpg",
-      "photos/b93c036dd9-2.jpg",
-      "photos/b93c036dd9-3.jpg",
-      "photos/b93c036dd9-4.jpg",
-      "photos/b93c036dd9-5.jpg"
-    ]
+    "photo": null,
+    "photos": []
   },
   {
     "id": "30577814b9",
@@ -2798,13 +2792,7 @@
     "photos": [
       "photos/7b2a6a6702-1.jpg",
       "photos/7b2a6a6702-2.jpg",
-      "photos/7b2a6a6702-3.jpg",
-      "photos/7b2a6a6702-4.jpg",
-      "photos/7b2a6a6702-5.jpg",
-      "photos/7b2a6a6702-6.jpg",
-      "photos/7b2a6a6702-7.jpg",
-      "photos/7b2a6a6702-8.jpg",
-      "photos/7b2a6a6702-9.jpg"
+      "photos/7b2a6a6702-3.jpg"
     ]
   },
   {
@@ -2880,10 +2868,8 @@
     "category": "Motor Yacht",
     "group_label": "Up to 18 guests*",
     "capacity": 18,
-    "photo": "photos/a8416e31b9-1.jpg",
-    "photos": [
-      "photos/a8416e31b9-1.jpg"
-    ]
+    "photo": null,
+    "photos": []
   },
   {
     "id": "7e4704994f",
@@ -3127,13 +3113,7 @@
     "photos": [
       "photos/7683f33bc8-1.jpg",
       "photos/7683f33bc8-2.jpg",
-      "photos/7683f33bc8-3.jpg",
-      "photos/7683f33bc8-4.jpg",
-      "photos/7683f33bc8-5.jpg",
-      "photos/7683f33bc8-6.jpg",
-      "photos/7683f33bc8-7.jpg",
-      "photos/7683f33bc8-8.jpg",
-      "photos/7683f33bc8-9.jpg"
+      "photos/7683f33bc8-3.jpg"
     ]
   },
   {
@@ -5648,8 +5628,7 @@
       "photos/c416806183-6.jpg",
       "photos/c416806183-7.jpg",
       "photos/c416806183-8.jpg",
-      "photos/c416806183-9.jpg",
-      "photos/c416806183-10.jpg"
+      "photos/c416806183-9.jpg"
     ]
   },
   {
@@ -6302,8 +6281,7 @@
       "photos/e73ea56c15-15.jpg",
       "photos/e73ea56c15-16.jpg",
       "photos/e73ea56c15-17.jpg",
-      "photos/e73ea56c15-18.jpg",
-      "photos/e73ea56c15-19.jpg"
+      "photos/e73ea56c15-18.jpg"
     ]
   },
   {
