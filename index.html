@@ -189,6 +189,28 @@ nav.pills{display:flex;gap:6px;align-items:center}
 .btn-outline:hover{border-color:var(--accent)}
 .empty{text-align:center;padding:70px 20px;color:var(--ink-faint)}
 
+/* ---------- vessel detail page ---------- */
+.breadcrumb{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--ink-faint);padding:18px 0 4px;flex-wrap:wrap}
+.breadcrumb a{color:var(--ink-muted);text-decoration:none}
+.breadcrumb a:hover{color:var(--accent)}
+.breadcrumb span.sep{color:var(--border)}
+.breadcrumb span.current{color:var(--ink);font-weight:500}
+.vessel-gallery{margin-top:6px}
+.vessel-gallery .art{aspect-ratio:16/9;border-radius:var(--radius-l);overflow:hidden;box-shadow:var(--shadow-lg);border:1px solid var(--border-soft)}
+@media (max-width:640px){.vessel-gallery .art{aspect-ratio:4/3;border-radius:var(--radius-m)}}
+.vessel-layout{display:grid;grid-template-columns:1.6fr 1fr;gap:40px;align-items:start;padding:34px 0 20px}
+@media (max-width:900px){.vessel-layout{grid-template-columns:1fr;gap:30px}}
+.vessel-title-row{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:18px}
+.vessel-title-row h1{font-size:clamp(24px,3.2vw,32px);margin:4px 0 8px;font-weight:600}
+.fav-btn-lg{flex-shrink:0;width:44px;height:44px;border-radius:999px;border:1px solid var(--border);background:var(--surface);color:var(--ink-muted);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:border-color .15s,color .15s}
+.fav-btn-lg:hover{border-color:var(--accent)}
+.fav-btn-lg.active{color:#E8897A;border-color:#E8897A}
+.vessel-main .section-h{margin-top:30px}
+.vessel-desc{font-size:14.5px;color:var(--ink-muted);line-height:1.7;margin:0}
+.vessel-side{position:sticky;top:92px}
+@media (max-width:900px){.vessel-side{position:static}}
+.price-card{background:var(--surface);border:1px solid var(--border-soft);border-radius:var(--radius-m);padding:22px;box-shadow:var(--shadow)}
+
 /* ---------- detail overlay ---------- */
 .scrim{position:fixed;inset:0;background:rgba(6,12,16,.55);backdrop-filter:blur(2px);z-index:100;opacity:0;pointer-events:none;transition:opacity .2s}
 .scrim.open{opacity:1;pointer-events:auto}
@@ -405,6 +427,8 @@ footer .foot-row{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1
   </main>
 </div>
 
+<div class="page" id="page-vessel"><div id="vesselContent"></div></div>
+
 <div class="page" id="page-about">
   <div class="page-head wrap">
     <div class="eyebrow">About</div>
@@ -593,21 +617,25 @@ fetch('data.json').then(r=>r.json()).then(data=>{
   renderHomeFeatured();
   renderAboutChips();
   updateBadges();
+  renderRoute();
 }).catch(()=>{
   document.getElementById('grid').innerHTML = '<div class="empty">Could not load the fleet data file.</div>';
   document.getElementById('homeFeatured').innerHTML = '<div class="empty">Could not load the fleet data file.</div>';
 });
 
 /* ---------------- routing ---------------- */
-const ROUTES = ['home','fleet','about','how','contact'];
-function currentRoute(){
-  const h = (location.hash||'').replace('#','');
-  return ROUTES.includes(h) ? h : 'home';
+const ROUTES = ['home','fleet','about','how','contact','vessel'];
+function parseHash(){
+  const h = (location.hash||'').replace(/^#/,'');
+  if(h.startsWith('vessel/')) return { route:'vessel', id: decodeURIComponent(h.slice(7)) };
+  return { route: ROUTES.includes(h) ? h : 'home', id:null };
 }
+function currentRoute(){ return parseHash().route; }
 function renderRoute(){
-  const r = currentRoute();
-  ROUTES.forEach(x=>{ const el=document.getElementById('page-'+x); if(el) el.classList.toggle('active', x===r); });
-  document.querySelectorAll('.navlink').forEach(a=>a.classList.toggle('active', a.dataset.route===r));
+  const { route, id } = parseHash();
+  ROUTES.forEach(x=>{ const el=document.getElementById('page-'+x); if(el) el.classList.toggle('active', x===route); });
+  document.querySelectorAll('.navlink').forEach(a=>a.classList.toggle('active', a.dataset.route===route));
+  if(route==='vessel') renderVesselPage(id);
   window.scrollTo(0,0);
 }
 window.addEventListener('hashchange', renderRoute);
@@ -747,12 +775,12 @@ function galleryStep(d){ gallerySet(GAL_INDEX+d); }
 function cardHTML(y){
   const [dur,price] = minPrice(y);
   const fav = favorites.has(y.id);
-  return `<article class="card" onclick="openDetail('${y.id}')">
+  return `<a class="card" href="#vessel/${y.id}" style="text-decoration:none">
     <div class="art">
       ${artHTML(y)}
       <span class="badge">${y.category}</span>
       ${y.photos && y.photos.length>1 ? `<span class="photocount">${cameraIcon()} ${y.photos.length}</span>` : ''}
-      <button class="fav-btn ${fav?'active':''}" onclick="event.stopPropagation();toggleFav('${y.id}')" aria-label="Save">
+      <button class="fav-btn ${fav?'active':''}" onclick="event.preventDefault();event.stopPropagation();toggleFav('${y.id}')" aria-label="Save">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="${fav?'currentColor':'none'}" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg>
       </button>
     </div>
@@ -766,7 +794,7 @@ function cardHTML(y){
       </div>
       <div class="pricerow"><div class="price">$${price.toLocaleString()}<span> / ${DUR_LABELS[dur]}</span></div></div>
     </div>
-  </article>`;
+  </a>`;
 }
 function pin(){ return `<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" style="flex-shrink:0"><path d="M12 22s7-7.2 7-12.5A7 7 0 0 0 5 9.5C5 14.8 12 22 12 22z"/><circle cx="12" cy="9.5" r="2.4"/></svg>`; }
 function cameraIcon(){ return `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>`; }
@@ -784,36 +812,85 @@ function updateBadges(){
   document.getElementById('reqCount').textContent = inquiries.length;
 }
 
-/* ---------------- detail panel ---------------- */
+/* ---------------- vessel detail page ---------------- */
 let currentDrawer=null;
-function openDetail(id){
-  const y = ALL.find(x=>x.id===id); if(!y) return;
+function vesselDescription(y){
+  const bits = [];
+  bits.push(`This ${y.size}-foot ${esc(y.category.toLowerCase())} boards out of ${esc(y.area)}, with charters covering ${esc(y.location)}.`);
+  bits.push(`Listed capacity is up to ${y.capacity} guests for half or full-day charters.`);
+  if(y.jacuzzi) bits.push('Comes equipped with an onboard jacuzzi.');
+  if(y.jetski) bits.push('A jet ski is included for guest use.');
+  return bits.join(' ');
+}
+function renderVesselPage(id){
+  const el = document.getElementById('vesselContent');
+  const y = ALL.find(x=>x.id===id);
+  if(!y){
+    el.innerHTML = `<div class="wrap" style="padding:70px 0"><div class="empty">We couldn't find that vessel. <a href="#fleet">Back to the fleet &rarr;</a></div></div>`;
+    return;
+  }
+  document.title = `${y.name} \u2014 LATITUDE \u00B025`;
   const entries = Object.entries(y.prices).sort((a,b)=>a[1]-b[1]);
   const cheapestDur = entries[0][0];
-  document.getElementById('detailContent').innerHTML = `
-    <button class="panel-close" onclick="closeAll()">\u2715</button>
-    ${galleryHTML(y)}
-    <div class="panel-content">
-      <div class="eyebrow" style="margin-bottom:8px">${y.category} \u00B7 ${y.brand||'Unbranded'}${y.year?' \u00B7 '+y.year:''}</div>
-      <h2>${esc(y.name)}</h2>
-      <div class="panel-sub">${pin()} ${esc(y.location)} <span>\u00B7</span> ${esc(y.group_label)}</div>
+  const fav = favorites.has(y.id);
+  let related = sortList(ALL.filter(o=>o.id!==y.id && o.category===y.category)).slice(0,4);
+  if(related.length<4) related = sortList(ALL.filter(o=>o.id!==y.id)).slice(0,4);
 
-      <div class="specs">
-        <div class="spec"><div class="k">Length</div><div class="v mono">${y.size} ft</div></div>
-        <div class="spec"><div class="k">Boarding Area</div><div class="v">${esc(y.area)}</div></div>
-        <div class="spec"><div class="k">Jacuzzi</div><div class="v">${y.jacuzzi?'Yes':'Not listed'}</div></div>
-        <div class="spec"><div class="k">Jet Ski Onboard</div><div class="v">${y.jetski?'Yes':'Not listed'}</div></div>
+  el.innerHTML = `
+    <div class="wrap">
+      <nav class="breadcrumb"><a href="#home">Home</a><span class="sep">/</span><a href="#fleet">Fleet</a><span class="sep">/</span><span class="current">${esc(y.name)}</span></nav>
+    </div>
+    <div class="wrap vessel-gallery">${galleryHTML(y)}</div>
+    <div class="wrap vessel-layout">
+      <div class="vessel-main">
+        <div class="vessel-title-row">
+          <div>
+            <div class="eyebrow" style="margin-bottom:8px">${y.category} \u00B7 ${y.brand||'Unbranded'}${y.year?' \u00B7 '+y.year:''}</div>
+            <h1>${esc(y.name)}</h1>
+            <div class="panel-sub" style="margin-bottom:0">${pin()} ${esc(y.location)} <span>\u00B7</span> ${esc(y.group_label)}</div>
+          </div>
+          <button class="fav-btn-lg ${fav?'active':''}" onclick="toggleFav('${y.id}')" aria-label="Save">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="${fav?'currentColor':'none'}" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg>
+          </button>
+        </div>
+
+        <div class="specs">
+          <div class="spec"><div class="k">Length</div><div class="v mono">${y.size} ft</div></div>
+          <div class="spec"><div class="k">Boarding Area</div><div class="v">${esc(y.area)}</div></div>
+          <div class="spec"><div class="k">Guest Capacity</div><div class="v mono">${y.capacity}</div></div>
+          <div class="spec"><div class="k">Category</div><div class="v">${esc(y.category)}</div></div>
+          <div class="spec"><div class="k">Jacuzzi</div><div class="v">${y.jacuzzi?'Yes':'Not listed'}</div></div>
+          <div class="spec"><div class="k">Jet Ski Onboard</div><div class="v">${y.jetski?'Yes':'Not listed'}</div></div>
+        </div>
+
+        <h4 class="section-h">About this charter</h4>
+        <p class="vessel-desc">${vesselDescription(y)}</p>
+
+        <h4 class="section-h">Amenities</h4>
+        <div class="amenities">
+          <span class="tag">${esc(y.group_label)}</span>
+          ${y.jacuzzi?'<span class="tag">Jacuzzi</span>':''}
+          ${y.jetski?'<span class="tag">Jet Ski</span>':''}
+        </div>
       </div>
 
-      <h4 class="section-h">Charter Pricing (weekend rate)</h4>
-      <div class="pricetable">
-        ${entries.map(([dur,price])=>`<div class="pricerow2 ${dur===cheapestDur?'best':''}"><div class="dur">${DUR_LABELS[dur]} charter</div><div><div class="amt">$${price.toLocaleString()}</div><div class="perhr">$${Math.round(price/parseInt(dur)).toLocaleString()}/hr</div></div></div>`).join('')}
-      </div>
+      <aside class="vessel-side">
+        <div class="price-card">
+          <h4 class="section-h" style="margin-top:0">Charter Pricing (weekend rate)</h4>
+          <div class="pricetable">
+            ${entries.map(([dur,price])=>`<div class="pricerow2 ${dur===cheapestDur?'best':''}"><div class="dur">${DUR_LABELS[dur]} charter</div><div><div class="amt">$${price.toLocaleString()}</div><div class="perhr">$${Math.round(price/parseInt(dur)).toLocaleString()}/hr</div></div></div>`).join('')}
+          </div>
+          <button class="cta-book" onclick="openBooking('${y.id}')">Request to Book</button>
+          <p class="disclaimer">* Guest counts are an editorial estimate based on vessel length, not a USCG passenger certificate \u2014 confirm exact capacity when you book. Every request goes through the LATITUDE \u00B025 concierge team, who confirm availability and details with the vessel's operator on your behalf \u2014 we don't process payment or guarantee availability.</p>
+        </div>
+      </aside>
+    </div>
 
-      <button class="cta-book" onclick="openBooking('${y.id}')">Request to Book</button>
-      <p class="disclaimer">* Guest counts are an editorial estimate based on vessel length, not a USCG passenger certificate \u2014 confirm exact capacity when you book. Every request goes through the LATITUDE \u00B025 concierge team, who confirm availability and details with the vessel's operator on your behalf \u2014 we don't process payment or guarantee availability.</p>
-    </div>`;
-  showPanel('detailPanel');
+    <div class="wrap section" style="padding-top:6px">
+      <div class="section-top"><div><h2>Similar vessels</h2></div></div>
+      <div class="grid">${related.map(cardHTML).join('')}</div>
+    </div>
+  `;
 }
 function openBooking(id){
   const y = ALL.find(x=>x.id===id); if(!y) return;
@@ -842,6 +919,7 @@ function openBooking(id){
         <button class="cta-book" type="submit">Send Request</button>
       </form>
     </div>`;
+  showPanel('detailPanel');
 }
 const CONCIERGE_EMAIL = 'pabloapcv@gmail.com';
 function submitBooking(ev, id){
@@ -902,9 +980,9 @@ function renderDrawer(which){
       <div class="drawer-list">${list.length? list.map(y=>`
         <div class="saved-row">
           <div class="thumb">${artHTML(y)}</div>
-          <div class="info" onclick="closeAll();setTimeout(()=>openDetail('${y.id}'),200)" style="cursor:pointer">
+          <a class="info" href="#vessel/${y.id}" onclick="closeAll()" style="cursor:pointer;text-decoration:none;color:inherit;display:block">
             <b>${esc(y.name)}</b><span>${y.size}\u2032 \u00B7 ${esc(y.area)}</span>
-          </div>
+          </a>
           <button class="remove-x" onclick="toggleFav('${y.id}')">\u2715</button>
         </div>`).join('') : '<p style="color:var(--ink-faint);font-size:13.5px">Nothing saved yet \u2014 tap the heart on any listing.</p>'}</div>`;
   } else {
