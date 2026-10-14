@@ -91,7 +91,7 @@ nav.pills{display:flex;gap:6px;align-items:center}
 .btn-cta.ghost:hover{border-color:var(--accent)}
 
 /* ---------- search console ---------- */
-.console{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-l);box-shadow:var(--shadow);padding:18px;display:grid;grid-template-columns:repeat(4,1fr) auto;gap:0;margin-top:30px;position:relative}
+.console{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-l);box-shadow:var(--shadow);padding:18px;display:grid;grid-template-columns:1.3fr repeat(3,1fr) auto;gap:0;margin-top:30px;position:relative}
 @media (max-width:900px){.console{grid-template-columns:1fr 1fr;gap:14px;padding:18px}}
 .field{padding:6px 18px;border-right:1px solid var(--border-soft);display:flex;flex-direction:column;gap:4px}
 .field:last-of-type{border-right:none}
@@ -385,6 +385,10 @@ footer .foot-row{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1
   <div class="wrap">
     <div class="console">
       <div class="field">
+        <label for="s-keyword">Search</label>
+        <input type="text" id="s-keyword" placeholder="Vessel name, brand, or location&hellip;" oninput="setKeyword(this.value)" onkeydown="if(event.key==='Enter')applyHeroSearch()">
+      </div>
+      <div class="field">
         <label for="s-area">Boarding area</label>
         <select id="s-area"><option value="All">All South Florida</option></select>
       </div>
@@ -540,7 +544,7 @@ let VISIBLE = 24;
 const PAGE = 24;
 let favorites = new Set(JSON.parse(localStorage.getItem('lat25_favorites')||'[]'));
 let inquiries = JSON.parse(localStorage.getItem('lat25_inquiries')||'[]');
-let filters = { category:'All', area:'All', amenity:null, favoritesOnly:false, minGuests:0, duration:'any' };
+let filters = { category:'All', area:'All', amenity:null, favoritesOnly:false, minGuests:0, duration:'any', keyword:'' };
 let sortMode = 'featured';
 
 const CATS = ['All','Day Cruiser','Sport Yacht','Motor Yacht','Luxury Yacht','Superyacht'];
@@ -697,10 +701,12 @@ function toggleAmenity(key,val){
   renderGrid();
 }
 function setSort(v){ sortMode=v; renderGrid(); }
+function setKeyword(v){ filters.keyword = v.trim().toLowerCase(); renderGrid(); }
 function applyHeroSearch(){
   filters.area = document.getElementById('s-area').value;
   filters.duration = document.getElementById('s-dur').value;
   filters.minGuests = parseInt(document.getElementById('s-guests').value)||0;
+  filters.keyword = document.getElementById('s-keyword').value.trim().toLowerCase();
   document.getElementById('areaFilter').value = filters.area;
   renderGrid();
   document.querySelector('.filterbar').scrollIntoView({behavior:'smooth',block:'start'});
@@ -714,6 +720,10 @@ function matches(y){
   if(filters.favoritesOnly && !favorites.has(y.id)) return false;
   if(filters.minGuests && y.capacity < filters.minGuests) return false;
   if(filters.duration && filters.duration!=='any' && !(filters.duration in y.prices)) return false;
+  if(filters.keyword){
+    const hay = `${y.name} ${y.brand||''} ${y.category} ${y.area} ${y.location} ${y.group_label||''}`.toLowerCase();
+    if(!hay.includes(filters.keyword)) return false;
+  }
   return true;
 }
 function sortList(list){
