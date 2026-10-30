@@ -14,9 +14,9 @@
 <style>
 :root{
   --bg:#F0F5F4; --surface:#FFFFFF; --surface-alt:#E4EEEC; --surface-raised:#FFFFFF;
-  --ink:#0E1A22; --ink-muted:#4C6168; --ink-faint:#7C8E92;
+  --ink:#0E1A22; --ink-muted:#4C6168; --ink-faint:#5E7276;
   --border:#D3E0DD; --border-soft:#E3ECE9;
-  --accent:#AD7B37; --accent-strong:#8A5F26; --accent-ink:#FFFFFF; --accent-tint:#F2E6D3;
+  --accent:#AD7B37; --accent-strong:#8A5F26; --accent-ink:#0E1A22; --accent-tint:#F2E6D3;
   --teal:#136863; --teal-tint:#DCEEEB; --teal-ink:#0C4541;
   --danger:#A14233; --danger-tint:#F3DEDA;
   --shadow:0 1px 2px rgba(14,26,34,.06),0 8px 24px -8px rgba(14,26,34,.12);
@@ -293,6 +293,7 @@ footer .foot-row{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1
 </head>
 <body>
 
+<div id="appRoot">
 <header class="site">
   <div class="wrap header-row">
     <a class="brand" href="#home">
@@ -546,10 +547,11 @@ footer .foot-row{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1
     <div>Prices reflect listed weekend rates and may vary by date, fuel, and gratuity. Final terms are confirmed by your concierge before booking.</div>
   </div>
 </footer>
+</div>
 
 <div class="scrim" id="scrim" onclick="closeAll()"></div>
-<div class="panel" id="detailPanel"><div id="detailContent"></div></div>
-<div class="panel" id="drawerPanel" style="width:min(420px,100%)"><div id="drawerContent" class="panel-content" style="padding-top:60px"></div></div>
+<div class="panel" id="detailPanel" role="dialog" aria-modal="true" tabindex="-1"><div id="detailContent"></div></div>
+<div class="panel" id="drawerPanel" role="dialog" aria-modal="true" tabindex="-1" style="width:min(420px,100%)"><div id="drawerContent" class="panel-content" style="padding-top:60px"></div></div>
 
 <script>
 let ALL = [];
@@ -1012,6 +1014,7 @@ function submitBooking(ev, id){
         <button class="btn-outline" onclick="openDrawer('requests')">View all requests</button>
       </div>
     </div>`;
+  focusPanelContent(document.getElementById('detailPanel'));
 }
 
 /* ---------------- drawers (saved / requests) ---------------- */
@@ -1036,25 +1039,52 @@ function renderDrawer(which){
       ${inquiries.length? inquiries.map(r=>`
         <div class="inquiry-row">
           <span class="status">Sent</span>
-          <b>${esc(r.yachtName)}</b>
+          <a href="#vessel/${r.yachtId}" onclick="closeAll()" style="color:inherit;text-decoration:none">
+            <b style="text-decoration:underline;text-underline-offset:2px">${esc(r.yachtName)}</b>
+          </a>
           <div class="meta2">${r.date||'\u2014'} at ${r.time||'\u2014'} \u00B7 ${DUR_LABELS[r.duration]||r.duration} \u00B7 ${r.guests} guests</div>
-          <div class="meta2 mono" style="font-size:11px">Vessel ID: ${esc(r.yachtId)}</div>
           <div class="meta2">Our concierge team will confirm with the operator</div>
         </div>`).join('') : '<p style="color:var(--ink-faint);font-size:13.5px">No requests sent yet.</p>'}`;
   }
 }
 
 /* ---------------- panel plumbing ---------------- */
+let lastFocused = null;
+function focusables(container){
+  return [...container.querySelectorAll('button, a[href], input, select, textarea, [tabindex]:not([tabindex="-1"])')].filter(el=>el.offsetParent!==null);
+}
 function showPanel(which){
+  lastFocused = document.activeElement;
   document.getElementById('scrim').classList.add('open');
-  document.getElementById(which).classList.add('open');
+  const panel = document.getElementById(which);
+  panel.classList.add('open');
+  document.getElementById('appRoot').inert = true;
+  const f = focusables(panel);
+  (f[0] || panel).focus();
+}
+function focusPanelContent(panel){
+  const f = focusables(panel);
+  (f[0] || panel).focus();
 }
 function closeAll(){
   document.getElementById('scrim').classList.remove('open');
   document.getElementById('detailPanel').classList.remove('open');
   document.getElementById('drawerPanel').classList.remove('open');
+  document.getElementById('appRoot').inert = false;
+  if(lastFocused && document.body.contains(lastFocused)) lastFocused.focus();
+  lastFocused = null;
 }
-document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeAll(); });
+function trapFocus(e){
+  if(e.key!=='Tab') return;
+  const openPanel = document.querySelector('.panel.open');
+  if(!openPanel) return;
+  const f = focusables(openPanel);
+  if(!f.length) return;
+  const first=f[0], last=f[f.length-1];
+  if(e.shiftKey && document.activeElement===first){ e.preventDefault(); last.focus(); }
+  else if(!e.shiftKey && document.activeElement===last){ e.preventDefault(); first.focus(); }
+}
+document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeAll(); else trapFocus(e); });
 
 /* ---------------- theme ---------------- */
 function applyTheme(saved){
