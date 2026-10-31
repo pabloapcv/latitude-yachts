@@ -11,6 +11,24 @@
 <meta property="og:image" content="https://latitude25.us/photos/84e6128c08-1.jpg">
 <meta name="theme-color" content="#0E1A22">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%230E1A22'/%3E%3Cpath d='M4 17h16M4 17c2-4 4-6 8-6s6 2 8 6' stroke='%23D8AD6D' stroke-width='1.6' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='12' cy='7' r='2.2' fill='%23D8AD6D'/%3E%3C/svg%3E">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Latitude °25",
+  "description": "Concierge yacht and boat charter booking service covering South Florida, from Miami Beach to Fort Lauderdale.",
+  "url": "https://latitude25.us/",
+  "image": "https://latitude25.us/photos/84e6128c08-1.jpg",
+  "areaServed": [
+    {"@type": "City", "name": "Miami Beach, FL"},
+    {"@type": "City", "name": "Fort Lauderdale, FL"},
+    {"@type": "City", "name": "Key Biscayne, FL"},
+    {"@type": "City", "name": "Miami, FL"},
+    {"@type": "City", "name": "Boca Raton, FL"}
+  ],
+  "priceRange": "$650-$5750"
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
 <style>
@@ -162,6 +180,8 @@ nav.pills{display:flex;gap:6px;align-items:center}
 
 .about-copy{max-width:72ch}
 .about-copy p{font-size:15.5px;color:var(--ink-muted);line-height:1.7;margin:0 0 18px}
+.area-detail-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:28px}
+@media (max-width:860px){.area-detail-grid{grid-template-columns:1fr}}
 .area-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
 .area-chip{border:1px solid var(--border);background:var(--surface);color:var(--ink-muted);padding:8px 15px;border-radius:999px;font-size:13px}
 
@@ -484,6 +504,24 @@ footer .foot-row{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1
   <section class="section wrap">
     <div class="section-top"><div><h2>Where we operate</h2><p>Boarding locations across greater South Florida.</p></div></div>
     <div class="area-chips" id="aboutAreaChips"></div>
+    <div class="area-detail-grid">
+      <div class="feature-card">
+        <h3>Miami Beach yacht charters</h3>
+        <p>Board from South Beach or Sunset Harbour and cruise past Star Island, Fisher Island, and the Miami skyline &#8212; our most requested boarding area for first-time charters.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Fort Lauderdale yacht charters</h3>
+        <p>Board along the New River or Las Olas with quick access to open water through Port Everglades. Fort Lauderdale's fleet skews larger, with more motor yachts and superyachts than any other area.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Key Biscayne boat charters</h3>
+        <p>A quieter boarding spot with easy access to sandbars and Stiltsville &#8212; a favorite for day cruisers and smaller groups out of Rickenbacker Marina.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Downtown Miami &amp; Brickell charters</h3>
+        <p>Dock minutes from the downtown and Brickell skyline, with fast access out to Biscayne Bay &#8212; convenient for anyone staying or working in the city center.</p>
+      </div>
+    </div>
   </section>
   <section class="section wrap" style="padding-top:0">
     <a href="#fleet" class="btn-cta primary">Browse the fleet</a>
