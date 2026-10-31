@@ -2,7 +2,7 @@
 
 An Airbnb-style charter yacht platform for South Florida — browse, filter, and request to book from a fleet of 306 vessels (21–124 ft), all mediated through a single concierge team rather than direct operator contact.
 
-**Live site:** https://pabloapcv.github.io/latitude-yachts/
+**Live site:** https://latitude25.us/ (custom domain; also reachable at https://pabloapcv.github.io/latitude-yachts/)
 
 ## What's here
 
@@ -20,6 +20,20 @@ git add -A
 git commit -m "..."
 git push
 ```
+
+## Custom domain
+
+`CNAME` in this repo tells GitHub Pages to serve the site at `latitude25.us`. DNS for the domain needs these records at the DNS provider (Cloudflare, since the domain is registered there):
+
+| Type  | Name | Value |
+|-------|------|-------|
+| A     | @    | 185.199.108.153 |
+| A     | @    | 185.199.109.153 |
+| A     | @    | 185.199.110.153 |
+| A     | @    | 185.199.111.153 |
+| CNAME | www  | pabloapcv.github.io |
+
+If Cloudflare's orange-cloud proxy is on for these records, either turn it to "DNS only" (grey cloud) or keep it proxied — both work with GitHub Pages, but DNS-only is simpler to debug if something looks wrong. In the repo's GitHub Settings → Pages, set the custom domain to `latitude25.us` and enable "Enforce HTTPS" once the DNS check passes (can take up to 24 hours, usually much faster).
 
 ## Local preview
 
