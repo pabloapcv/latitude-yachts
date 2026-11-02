@@ -771,32 +771,39 @@ function renderHomeFeatured(){
 function renderAboutChips(){
   document.getElementById('aboutAreaChips').innerHTML = AREAS.slice(1).map(a=>`<span class="area-chip">${a}</span>`).join('');
 }
-function submitContact(ev){
+async function submitContact(ev){
   ev.preventDefault();
-  const fd = new FormData(ev.target);
+  const form = ev.target;
+  const fd = new FormData(form);
   const rec = { id:'msg_'+Date.now(), name:fd.get('name'), email:fd.get('email'), phone:fd.get('phone'), message:fd.get('message'), createdAt:new Date().toISOString() };
-  const msgs = JSON.parse(localStorage.getItem('lat25_contact_messages')||'[]');
-  msgs.unshift(rec);
-  localStorage.setItem('lat25_contact_messages', JSON.stringify(msgs));
+  const wrap = document.getElementById('contactFormWrap');
+  const btn = form.querySelector('button[type=submit]');
+  if(btn){ btn.disabled = true; btn.textContent = 'Sending…'; }
 
-  const subject = `Website inquiry from ${rec.name || 'a visitor'}`;
-  const bodyLines = [
-    `Name: ${rec.name}`,
-    `Email: ${rec.email}`,
-    `Phone: ${rec.phone || '(not provided)'}`,
-    '',
-    rec.message,
-  ];
-  const mailtoUrl = `mailto:${CONCIERGE_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyLines.join('\n'))}`;
-  window.location.href = mailtoUrl;
+  fd.set('_subject', `Website inquiry from ${rec.name || 'a visitor'}`);
+  let ok = false;
+  try {
+    const res = await fetch(FORM_ENDPOINT, { method:'POST', body: fd, headers: {'Accept':'application/json'} });
+    ok = res.ok;
+  } catch(e) { ok = false; }
 
-  document.getElementById('contactFormWrap').innerHTML = `
-    <div class="contact-card">
-      <div class="check" style="margin:0 0 16px">✓</div>
-      <h3>Message sent</h3>
-      <p>Thanks, ${esc((rec.name||'').split(' ')[0]||'there')} — your email app should have opened with the message pre-filled, just hit send. Our concierge team will reply to ${esc(rec.email)} shortly.</p>
-      <p class="disclaimer" style="margin-top:10px">If your email app didn't open, email us directly at <b>${CONCIERGE_EMAIL}</b>.</p>
-    </div>`;
+  if(ok){
+    const msgs = JSON.parse(localStorage.getItem('lat25_contact_messages')||'[]');
+    msgs.unshift(rec);
+    localStorage.setItem('lat25_contact_messages', JSON.stringify(msgs));
+    wrap.innerHTML = `
+      <div class="contact-card">
+        <div class="check" style="margin:0 0 16px">✓</div>
+        <h3>Message sent</h3>
+        <p>Thanks, ${esc((rec.name||'').split(' ')[0]||'there')} — we've received your message and will reply to ${esc(rec.email)} shortly.</p>
+      </div>`;
+  } else {
+    wrap.innerHTML = `
+      <div class="contact-card">
+        <h3>Something went wrong</h3>
+        <p>We couldn't send your message automatically. Please email us directly at <b>${CONCIERGE_EMAIL}</b>.</p>
+      </div>`;
+  }
 }
 
 function buildFilterPills(){
@@ -1064,10 +1071,12 @@ function openBooking(id){
   showPanel('detailPanel');
 }
 const CONCIERGE_EMAIL = 'concierge@latitude25.us';
-function submitBooking(ev, id){
+const FORM_ENDPOINT = 'https://formspree.io/f/mwllwapj';
+async function submitBooking(ev, id){
   ev.preventDefault();
+  const form = ev.target;
   const y = ALL.find(x=>x.id===id);
-  const fd = new FormData(ev.target);
+  const fd = new FormData(form);
   const rec = {
     id: 'req_'+Date.now(), yachtId: id, yachtName: y.name,
     name: fd.get('name'), phone: fd.get('phone'), email: fd.get('email'),
@@ -1075,40 +1084,47 @@ function submitBooking(ev, id){
     guests: fd.get('guests'), notes: fd.get('notes'),
     createdAt: new Date().toISOString()
   };
-  inquiries.unshift(rec);
-  localStorage.setItem('lat25_inquiries', JSON.stringify(inquiries));
-  updateBadges();
+
+  const btn = form.querySelector('button[type=submit]');
+  if(btn){ btn.disabled = true; btn.textContent = 'Sending\u2026'; }
 
   const durLabel = DUR_LABELS[rec.duration] || rec.duration;
-  const subject = `Booking request: ${y.name} (ID ${y.id})`;
-  const bodyLines = [
-    `Vessel: ${y.name}`,
-    `Vessel ID: ${y.id}  \u2014 look this up in owners_lookup.csv for the operator's contact`,
-    `Size / area: ${y.size}' \u00b7 ${y.area}`,
-    '',
-    `Client name: ${rec.name}`,
-    `Client phone: ${rec.phone}`,
-    `Client email: ${rec.email}`,
-    '',
-    `Preferred date: ${rec.date} at ${rec.time}`,
-    `Charter length: ${durLabel}`,
-    `Party size: ${rec.guests || 'not specified'}`,
-    `Notes: ${rec.notes || '(none)'}`,
-  ];
-  const mailtoUrl = `mailto:${CONCIERGE_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyLines.join('\n'))}`;
-  window.location.href = mailtoUrl;
+  fd.set('_subject', `Booking request: ${y.name} (ID ${y.id})`);
+  fd.set('vessel_name', y.name);
+  fd.set('vessel_id', y.id);
+  fd.set('vessel_size_area', `${y.size}' \u00b7 ${y.area}`);
+  fd.set('charter_length', durLabel);
 
-  document.getElementById('detailContent').innerHTML = `
-    <button class="panel-close" onclick="closeAll()">\u2715</button>
-    <div class="panel-content" style="padding-top:90px">
-      <div class="confirm-box">
-        <div class="check">\u2713</div>
-        <h3>Request sent</h3>
-        <p>We've received your request for <b>${esc(y.name)}</b>. Your email app should have opened with the request pre-filled \u2014 just hit send. Our concierge team will confirm availability and reach out to you directly to finalize the details.</p>
-        <p class="disclaimer" style="margin-top:10px">If your email app didn't open, email us directly at <b>${CONCIERGE_EMAIL}</b> and mention vessel ID <b>${y.id}</b>.</p>
-        <button class="btn-outline" onclick="openDrawer('requests')">View all requests</button>
-      </div>
-    </div>`;
+  let ok = false;
+  try {
+    const res = await fetch(FORM_ENDPOINT, { method:'POST', body: fd, headers: {'Accept':'application/json'} });
+    ok = res.ok;
+  } catch(e) { ok = false; }
+
+  if(ok){
+    inquiries.unshift(rec);
+    localStorage.setItem('lat25_inquiries', JSON.stringify(inquiries));
+    updateBadges();
+    document.getElementById('detailContent').innerHTML = `
+      <button class="panel-close" onclick="closeAll()">\u2715</button>
+      <div class="panel-content" style="padding-top:90px">
+        <div class="confirm-box">
+          <div class="check">\u2713</div>
+          <h3>Request sent</h3>
+          <p>We've received your request for <b>${esc(y.name)}</b>. Our concierge team will confirm availability and reach out to you directly to finalize the details.</p>
+          <button class="btn-outline" onclick="openDrawer('requests')">View all requests</button>
+        </div>
+      </div>`;
+  } else {
+    document.getElementById('detailContent').innerHTML = `
+      <button class="panel-close" onclick="closeAll()">\u2715</button>
+      <div class="panel-content" style="padding-top:90px">
+        <div class="confirm-box">
+          <h3>Something went wrong</h3>
+          <p>We couldn't send your request automatically. Please email us directly at <b>${CONCIERGE_EMAIL}</b> and mention vessel ID <b>${y.id}</b>.</p>
+        </div>
+      </div>`;
+  }
   focusPanelContent(document.getElementById('detailPanel'));
 }
 
