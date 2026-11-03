@@ -2,6 +2,13 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JWNF86F9DB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-JWNF86F9DB');
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Latitude 25 &#176; &#8212; South Florida Yacht Charters</title>
 <meta name="description" content="Browse and book South Florida's charter fleet &#8212; from 21-foot day boats to 124-foot superyachts across Miami and Fort Lauderdale, all through one concierge team.">
@@ -793,6 +800,7 @@ async function submitContact(ev){
     const msgs = JSON.parse(localStorage.getItem('lat25_contact_messages')||'[]');
     msgs.unshift(rec);
     localStorage.setItem('lat25_contact_messages', JSON.stringify(msgs));
+    if(window.gtag) gtag('event', 'generate_lead', { lead_type: 'contact_form' });
     wrap.innerHTML = `
       <div class="contact-card">
         <div class="check" style="margin:0 0 16px">✓</div>
@@ -1107,6 +1115,7 @@ async function submitBooking(ev, id){
     inquiries.unshift(rec);
     localStorage.setItem('lat25_inquiries', JSON.stringify(inquiries));
     updateBadges();
+    if(window.gtag) gtag('event', 'generate_lead', { lead_type: 'booking_request', vessel_id: y.id, value: fd.get('duration') === '8h' ? 8 : (fd.get('duration') === '6h' ? 6 : 4) });
     document.getElementById('detailContent').innerHTML = `
       <button class="panel-close" onclick="closeAll()">\u2715</button>
       <div class="panel-content" style="padding-top:90px">
