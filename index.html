@@ -66,30 +66,6 @@
   --radius-s:8px; --radius-m:12px; --radius-l:16px; --radius-xl:24px;
   color-scheme:light;
 }
-@media(prefers-color-scheme:dark){
-  :root:not([data-theme="light"]){
-    --bg:#0A131A; --surface:#111E26; --surface-alt:#16262F;
-    --ink:#EDF4F2; --ink-muted:#9FB6B6; --ink-faint:#71898C;
-    --border:#223540; --border-soft:#1B2C35;
-    --brass:#D8AD6D; --brass-dark:#E8C089;
-    --teal:#56D6C7; --teal-dark:#7EEADD; --teal-tint:#123532;
-    --shadow-sm:0 1px 2px rgba(0,0,0,.2);
-    --shadow:0 1px 3px rgba(0,0,0,.3),0 4px 12px rgba(0,0,0,.2);
-    --shadow-lg:0 4px 8px rgba(0,0,0,.3),0 20px 40px -12px rgba(0,0,0,.5);
-    color-scheme:dark;
-  }
-}
-:root[data-theme="dark"]{
-  --bg:#0A131A; --surface:#111E26; --surface-alt:#16262F;
-  --ink:#EDF4F2; --ink-muted:#9FB6B6; --ink-faint:#71898C;
-  --border:#223540; --border-soft:#1B2C35;
-  --brass:#D8AD6D; --brass-dark:#E8C089;
-  --teal:#56D6C7; --teal-dark:#7EEADD; --teal-tint:#123532;
-  --shadow-sm:0 1px 2px rgba(0,0,0,.2);
-  --shadow:0 1px 3px rgba(0,0,0,.3),0 4px 12px rgba(0,0,0,.2);
-  --shadow-lg:0 4px 8px rgba(0,0,0,.3),0 20px 40px -12px rgba(0,0,0,.5);
-  color-scheme:dark;
-}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:'Inter',system-ui,sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased}
 h1,h2,h3,h4{font-family:'Fraunces',Georgia,serif;font-weight:400;letter-spacing:-.02em;margin:0}
@@ -120,10 +96,14 @@ img{max-width:100%;height:auto}
 
 header.site{position:sticky;top:0;z-index:100;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--border-soft)}
 .header-inner{display:flex;align-items:center;justify-content:space-between;height:64px}
-.logo{display:flex;align-items:center;gap:10px}
-.logo-icon{width:40px;height:40px;background:var(--ink);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--brass);font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600}
-.logo-text{font-family:'Inter',sans-serif;font-size:16px;font-weight:600;letter-spacing:-.02em}
-.logo-text span{color:var(--brass)}
+.logo{display:flex;align-items:center;gap:12px}
+.logo-compass{display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.logo-compass svg{display:block}
+.logo-text{display:flex;align-items:baseline;gap:2px}
+.logo-latitude{font-family:'Inter',sans-serif;font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-muted)}
+.logo-deg{font-family:'Fraunces',Georgia,serif;font-size:20px;font-weight:500;color:var(--brass);margin-left:4px}
+.logo-num{font-family:'Fraunces',Georgia,serif;font-size:26px;font-weight:600;color:var(--ink);letter-spacing:-.02em}
+@media(max-width:480px){.logo-latitude{display:none}}
 nav.desktop{display:flex;align-items:center;gap:32px}
 nav.desktop a{font-size:14px;color:var(--ink-muted);transition:color .15s}
 nav.desktop a:hover,nav.desktop a.active{color:var(--ink)}
@@ -494,9 +474,22 @@ footer{border-top:1px solid var(--border-soft);padding:40px 0}
 
 <header class="site">
   <div class="wrap header-inner">
-    <a href="#home" class="logo">
-      <div class="logo-icon">25</div>
-      <div class="logo-text">LATITUDE<span>&#176;25</span></div>
+    <a href="#home" class="logo" aria-label="Latitude 25 - South Florida Yacht Charters">
+      <span class="logo-compass">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <circle cx="16" cy="16" r="15" stroke="var(--brass)" stroke-width="1.5" opacity="0.4"/>
+          <circle cx="16" cy="16" r="10" stroke="var(--brass)" stroke-width="1"/>
+          <path d="M16 3.5 L17.4 8 L16 6.8 L14.6 8 Z" fill="var(--brass)"/>
+          <line x1="16" y1="1" x2="16" y2="5" stroke="var(--brass)" stroke-width="1.5"/>
+          <line x1="16" y1="27" x2="16" y2="31" stroke="var(--brass)" stroke-width="1" opacity="0.5"/>
+          <line x1="1" y1="16" x2="5" y2="16" stroke="var(--brass)" stroke-width="1" opacity="0.5"/>
+          <line x1="27" y1="16" x2="31" y2="16" stroke="var(--brass)" stroke-width="1" opacity="0.5"/>
+        </svg>
+      </span>
+      <span class="logo-text">
+        <span class="logo-latitude">LATITUDE</span>
+        <span class="logo-deg">&#176;</span><span class="logo-num">25</span>
+      </span>
     </a>
     <nav class="desktop">
       <a href="#fleet" data-route="fleet">The fleet</a>
@@ -513,9 +506,22 @@ footer{border-top:1px solid var(--border-soft);padding:40px 0}
 
 <div class="mobile-nav" id="mobileNav">
   <div class="mobile-nav-header">
-    <a href="#home" class="logo" onclick="closeMobileNav()">
-      <div class="logo-icon">25</div>
-      <div class="logo-text">LATITUDE<span>&#176;25</span></div>
+    <a href="#home" class="logo" onclick="closeMobileNav()" aria-label="Latitude 25 - South Florida Yacht Charters">
+      <span class="logo-compass">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <circle cx="16" cy="16" r="15" stroke="var(--brass)" stroke-width="1.5" opacity="0.4"/>
+          <circle cx="16" cy="16" r="10" stroke="var(--brass)" stroke-width="1"/>
+          <path d="M16 3.5 L17.4 8 L16 6.8 L14.6 8 Z" fill="var(--brass)"/>
+          <line x1="16" y1="1" x2="16" y2="5" stroke="var(--brass)" stroke-width="1.5"/>
+          <line x1="16" y1="27" x2="16" y2="31" stroke="var(--brass)" stroke-width="1" opacity="0.5"/>
+          <line x1="1" y1="16" x2="5" y2="16" stroke="var(--brass)" stroke-width="1" opacity="0.5"/>
+          <line x1="27" y1="16" x2="31" y2="16" stroke="var(--brass)" stroke-width="1" opacity="0.5"/>
+        </svg>
+      </span>
+      <span class="logo-text">
+        <span class="logo-latitude">LATITUDE</span>
+        <span class="logo-deg">&#176;</span><span class="logo-num">25</span>
+      </span>
     </a>
     <button class="mobile-nav-close" onclick="closeMobileNav()">Close &#215;</button>
   </div>
@@ -1064,7 +1070,7 @@ footer{border-top:1px solid var(--border-soft);padding:40px 0}
       <h3>1. Information we collect</h3>
       <p>When you submit a booking request or contact form, we collect the information you provide &#8212; name, email, phone number, and your message or charter details (preferred date, party size, vessel of interest). We don't collect payment information through the Site, because the Site doesn't process payments.</p>
       <h3>2. Information stored in your browser</h3>
-      <p>Favorites, past requests, and your light/dark theme preference are stored locally in your browser (via localStorage) so they persist between visits on that device. This data stays on your device &#8212; it is not transmitted to us or visible to anyone else unless you submit a request through a form.</p>
+      <p>Favorites and past requests are stored locally in your browser (via localStorage) so they persist between visits on that device. This data stays on your device &#8212; it is not transmitted to us or visible to anyone else unless you submit a request through a form.</p>
       <h3>3. How we use your information</h3>
       <p>We use the information you submit to respond to your inquiry, check availability with the relevant Operator, and coordinate your charter. We do not sell your information or use it for third-party advertising.</p>
       <h3>4. Who we share it with</h3>
