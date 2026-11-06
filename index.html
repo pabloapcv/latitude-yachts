@@ -247,6 +247,14 @@ footer{border-top:1px solid var(--border-soft);padding:40px 0}
 .photo-gallery-thumb:hover img{transform:scale(1.05)}
 .photo-gallery-thumb::after{content:'';position:absolute;inset:0;background:rgba(0,0,0,0);transition:background .2s}
 .photo-gallery-thumb:hover::after{background:rgba(0,0,0,.1)}
+.photo-gallery-thumb.active{border-color:var(--teal);opacity:1}
+.photo-gallery-thumb.active::after{background:rgba(19,104,99,.15)}
+.vessel-photo-gallery{margin-bottom:32px}
+.vessel-thumbs-grid{max-height:320px;overflow-y:auto;scrollbar-width:thin;scrollbar-color:var(--border) transparent}
+.vessel-thumbs-grid::-webkit-scrollbar{width:6px;height:6px}
+.vessel-thumbs-grid::-webkit-scrollbar-track{background:transparent}
+.vessel-thumbs-grid::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
+.vessel-thumbs-grid::-webkit-scrollbar-thumb:hover{background:var(--slate)}
 .photo-count-badge{position:absolute;bottom:8px;left:8px;background:rgba(14,26,34,.7);color:#fff;font-size:11px;font-weight:600;padding:4px 10px;border-radius:999px;backdrop-filter:blur(4px);display:flex;align-items:center;gap:5px}
 
 /* ---------- lightbox ---------- */
@@ -258,20 +266,20 @@ footer{border-top:1px solid var(--border-soft);padding:40px 0}
 .lightbox-close:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.4)}
 .lightbox-main{flex:1;display:flex;align-items:center;justify-content:center;position:relative;min-height:0;padding:0 60px}
 .lightbox-main img{max-width:100%;max-height:100%;object-fit:contain;border-radius:var(--radius-m)}
-.lightbox-nav{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:999px;border:1px solid rgba(255,255,255,.2);background:rgba(14,26,34,.6);color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(4px);transition:background .15s,border-color .15s}
-.lightbox-nav:hover{background:rgba(14,26,34,.9);border-color:rgba(255,255,255,.4)}
-.lightbox-nav.prev{left:12px}
-.lightbox-nav.next{right:12px}
+.lightbox-nav{position:absolute;top:50%;transform:translateY(-50%);width:56px;height:56px;border-radius:999px;border:2px solid rgba(255,255,255,.6);background:rgba(14,26,34,.85);color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(8px);transition:background .15s,border-color .15s,transform .15s;box-shadow:0 4px 16px rgba(0,0,0,.4)}
+.lightbox-nav:hover{background:rgba(14,26,34,1);border-color:rgba(255,255,255,.9);transform:translateY(-50%) scale(1.08)}
+.lightbox-nav.prev{left:16px}
+.lightbox-nav.next{right:16px}
 .lightbox-thumbs{flex-shrink:0;padding:16px 20px;overflow-x:auto;display:flex;gap:8px;justify-content:center}
 .lightbox-thumb{width:64px;height:48px;border-radius:6px;overflow:hidden;cursor:pointer;opacity:.5;transition:opacity .15s;flex-shrink:0;border:2px solid transparent}
 .lightbox-thumb.active{opacity:1;border-color:var(--accent)}
 .lightbox-thumb:hover{opacity:.85}
 .lightbox-thumb img{width:100%;height:100%;object-fit:cover}
 @media (max-width:640px){
-  .lightbox-main{padding:0 48px}
-  .lightbox-nav{width:36px;height:36px}
-  .lightbox-nav.prev{left:6px}
-  .lightbox-nav.next{right:6px}
+  .lightbox-main{padding:0 56px}
+  .lightbox-nav{width:44px;height:44px}
+  .lightbox-nav.prev{left:8px}
+  .lightbox-nav.next{right:8px}
   .lightbox-thumbs{justify-content:flex-start;padding:12px 16px}
 }
 .vessel-layout{display:grid;grid-template-columns:1.6fr 1fr;gap:40px;align-items:start;padding:34px 0 20px}
@@ -512,10 +520,12 @@ footer{border-top:1px solid var(--border-soft);padding:40px 0}
 .gallery-modal{position:fixed;inset:0;z-index:200;background:rgba(14,26,34,.95);display:none;flex-direction:column}
 .gallery-modal.open{display:flex}
 .gallery-modal-header{display:flex;justify-content:space-between;align-items:center;padding:16px 20px;color:#fff}
-.gallery-modal-close{width:40px;height:40px;border:none;background:rgba(255,255,255,.1);border-radius:50%;color:#fff;cursor:pointer}
+.gallery-modal-close{width:40px;height:40px;border:1px solid rgba(255,255,255,.2);background:transparent;border-radius:50%;color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .15s,border-color .15s}
+.gallery-modal-close:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.4)}
 .gallery-modal-body{flex:1;display:flex;align-items:center;justify-content:center;padding:20px}
 .gallery-modal-image{max-width:100%;max-height:100%;object-fit:contain}
-.gallery-modal-nav{position:absolute;top:50%;transform:translateY(-50%);width:48px;height:48px;border:none;background:rgba(255,255,255,.1);border-radius:50%;color:#fff;cursor:pointer}
+.gallery-modal-nav{position:absolute;top:50%;transform:translateY(-50%);width:56px;height:56px;border:2px solid rgba(255,255,255,.6);background:rgba(14,26,34,.85);border-radius:50%;color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(8px);transition:background .15s,border-color .15s,transform .15s;box-shadow:0 4px 16px rgba(0,0,0,.4)}
+.gallery-modal-nav:hover{background:rgba(14,26,34,1);border-color:rgba(255,255,255,.9);transform:translateY(-50%) scale(1.08)}
 .gallery-modal-nav.prev{left:20px}
 .gallery-modal-nav.next{right:20px}
 .gallery-modal-thumbs{display:flex;gap:8px;padding:16px 20px;overflow-x:auto;justify-content:center}
@@ -1208,15 +1218,21 @@ footer{border-top:1px solid var(--border-soft);padding:40px 0}
   <div class="panel-body" id="requestsPanelBody"></div>
 </div>
 
-<div class="gallery-modal" id="galleryModal">
+<div class="gallery-modal" id="galleryModal" role="dialog" aria-modal="true" aria-label="Vessel photo gallery">
   <div class="gallery-modal-header">
-    <span id="galleryCounter">1 / 5</span>
-    <button class="gallery-modal-close" onclick="closeGallery()">&#215;</button>
+    <span id="galleryCounter" class="mono" style="font-size:13px;font-weight:500">1 / 5</span>
+    <button class="gallery-modal-close" onclick="closeGallery()" aria-label="Close gallery">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
   </div>
   <div class="gallery-modal-body">
     <img src="" alt="" class="gallery-modal-image" id="galleryImage">
-    <button class="gallery-modal-nav prev" onclick="galleryPrev()">&#8249;</button>
-    <button class="gallery-modal-nav next" onclick="galleryNext()">&#8250;</button>
+    <button class="gallery-modal-nav prev" onclick="galleryPrev()" aria-label="Previous photo">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+    </button>
+    <button class="gallery-modal-nav next" onclick="galleryNext()" aria-label="Next photo">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
+    </button>
   </div>
   <div class="gallery-modal-thumbs" id="galleryThumbs"></div>
 </div>
@@ -1424,6 +1440,33 @@ function galleryHTML(y){
       ${thumbs.map((p,i)=>`<div class="photo-gallery-thumb" onclick="openLightbox(${i+1})"><img src="${p}" alt="${esc(y.name)} photo ${i+2}" loading="lazy"></div>`).join('')}
     </div>
   </div>`;
+}
+
+function vesselGalleryHTML(photos, name){
+  if (!photos || !photos.length) return '';
+  GAL_PHOTOS = photos; GAL_INDEX = 0;
+  const expandIcon = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>`;
+  const cameraIcon = `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>`;
+  const heroHTML = `<div class="photo-gallery-hero" onclick="openLightbox(0)" id="vesselHero">
+    <img src="${photos[0]}" alt="${esc(name)}" id="vesselHeroImg">
+    <div class="photo-overlay"></div>
+    <span class="photo-expand">${expandIcon} View all ${photos.length} photos</span>
+    <span class="photo-count-badge">${cameraIcon} ${photos.length}</span>
+  </div>`;
+  const thumbsHTML = photos.map((p,i)=>`<div class="photo-gallery-thumb${i===0?' active':''}" onclick="setVesselPhoto(${i})" data-idx="${i}"><img src="${p}" alt="${esc(name)} photo ${i+1}" loading="lazy"></div>`).join('');
+  return `<div class="photo-gallery vessel-photo-gallery">
+    ${heroHTML}
+    <div class="photo-gallery-grid vessel-thumbs-grid">
+      ${thumbsHTML}
+    </div>
+  </div>`;
+}
+
+function setVesselPhoto(idx){
+  GAL_INDEX = idx;
+  const heroImg = document.getElementById('vesselHeroImg');
+  if(heroImg && GAL_PHOTOS[idx]) heroImg.src = GAL_PHOTOS[idx];
+  document.querySelectorAll('.vessel-thumbs-grid .photo-gallery-thumb').forEach((t,i)=>t.classList.toggle('active',i===idx));
 }
 
 function openLightbox(idx){
@@ -1707,14 +1750,7 @@ function renderVesselPage(id) {
         </span>
       </div>
     </div>
-    <div class="vessel-gallery" onclick="openGallery(${JSON.stringify(photos).replace(/"/g, '&quot;')})">
-      <div class="vessel-gallery-main">
-        <img src="${photos[0]}" alt="${esc(y.name)}">
-      </div>
-      <div class="vessel-gallery-thumbs">
-        ${photos.slice(1, 3).map(p => `<div class="vessel-gallery-thumb"><img src="${p}" alt="${esc(y.name)}" loading="lazy"></div>`).join('')}
-      </div>
-    </div>
+    ${vesselGalleryHTML(photos, y.name)}
     <div class="vessel-layout">
       <div class="vessel-content">
         <h2>Room for a memorable day.</h2>
@@ -2216,8 +2252,10 @@ function closeMobileNav() {
 
 document.addEventListener('keydown', e => {
   const lightboxOpen = document.getElementById('lightbox').classList.contains('open');
+  const galleryOpen = document.getElementById('galleryModal').classList.contains('open');
   if (e.key === 'Escape') {
     if(lightboxOpen) closeLightbox();
+    else if(galleryOpen) closeGallery();
     else {
       closeMobileNav();
       closeAllPanels();
@@ -2227,6 +2265,9 @@ document.addEventListener('keydown', e => {
   } else if(lightboxOpen){
     if(e.key==='ArrowLeft') lightboxStep(-1);
     else if(e.key==='ArrowRight') lightboxStep(1);
+  } else if(galleryOpen){
+    if(e.key==='ArrowLeft') galleryPrev();
+    else if(e.key==='ArrowRight') galleryNext();
   } else {
     trapFocus(e);
   }
