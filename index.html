@@ -188,13 +188,16 @@ nav.desktop a:hover,nav.desktop a.active{color:var(--ink)}
 .process-aside p{font-size:14px;color:var(--ink-muted);margin:0}
 
 .yacht-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:24px}
+.yacht-grid-3{grid-template-columns:repeat(3,1fr)}
+@media(max-width:900px){.yacht-grid-3{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.yacht-grid-3{grid-template-columns:1fr}}
 .yacht-card{background:var(--surface);border:1px solid var(--border-soft);border-radius:var(--radius-m);overflow:hidden;transition:box-shadow .2s,transform .2s}
 .yacht-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-2px)}
-.yacht-card-image{position:relative;aspect-ratio:4/3;overflow:hidden;background:var(--surface-alt)}
+.yacht-card-image{display:block;position:relative;aspect-ratio:4/3;overflow:hidden;background:var(--surface-alt)}
 .yacht-card-image img{width:100%;height:100%;object-fit:cover}
 .yacht-card-save{position:absolute;top:12px;right:12px;width:36px;height:36px;border-radius:50%;background:rgba(14,26,34,.5);backdrop-filter:blur(4px);border:none;color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer}
 .yacht-card-save.active{color:#E8897A}
-.yacht-card-body{padding:16px}
+.yacht-card-body{display:block;padding:16px}
 .yacht-card-header{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px}
 .yacht-card h3{font-size:18px}
 .yacht-card-meta{font-size:13px;color:var(--ink-muted);margin-bottom:12px}
@@ -588,7 +591,7 @@ footer{border-top:1px solid var(--border-soft);padding:40px 0}
           </div>
         </a>
         <a href="#fleet" class="size-card" onclick="setLengthFilter('71-124')">
-          <img src="photos/1e1b8b66c2-1.jpg" alt="Luxury superyacht" loading="lazy">
+          <img src="photos/e66f0a19bb-1.jpg" alt="88-foot San Lorenzo superyacht" loading="lazy">
           <div class="size-card-content">
             <h3>71&#8211;124 ft</h3>
             <span class="size-card-link">Explore <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
@@ -645,7 +648,62 @@ footer{border-top:1px solid var(--border-soft);padding:40px 0}
         <h2 class="display-md">Worth a closer look.</h2>
         <p class="body-md">A few real vessels from the South Florida fleet.</p>
       </div>
-      <div class="yacht-grid" id="homeFeatured"></div>
+      <div class="yacht-grid yacht-grid-3" id="homeFeatured">
+        <div class="yacht-card">
+          <a href="#vessel/8b6acee855" class="yacht-card-image">
+            <img src="photos/8b6acee855-1.jpg" alt="40' VanDutch yacht">
+            <button class="yacht-card-save" onclick="event.preventDefault();event.stopPropagation();toggleSave('8b6acee855')" aria-label="Save yacht">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg>
+            </button>
+          </a>
+          <a href="#vessel/8b6acee855" class="yacht-card-body">
+            <div class="yacht-card-header">
+              <h3>40' VanDutch</h3>
+            </div>
+            <div class="yacht-card-meta">Downtown Miami &#183; 2014</div>
+            <div class="yacht-card-footer">
+              <div class="yacht-card-price">$1,950 <span>/ 4 hours</span></div>
+              <span class="yacht-card-link">View yacht <svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
+            </div>
+          </a>
+        </div>
+        <div class="yacht-card">
+          <a href="#vessel/8060c5fbac" class="yacht-card-image">
+            <img src="photos/8060c5fbac-1.jpg" alt="62' Azimut yacht">
+            <button class="yacht-card-save" onclick="event.preventDefault();event.stopPropagation();toggleSave('8060c5fbac')" aria-label="Save yacht">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg>
+            </button>
+          </a>
+          <a href="#vessel/8060c5fbac" class="yacht-card-body">
+            <div class="yacht-card-header">
+              <h3>62' Azimut</h3>
+            </div>
+            <div class="yacht-card-meta">Miami Beach &#183; 2008</div>
+            <div class="yacht-card-footer">
+              <div class="yacht-card-price">$2,750 <span>/ 4 hours</span></div>
+              <span class="yacht-card-link">View yacht <svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
+            </div>
+          </a>
+        </div>
+        <div class="yacht-card">
+          <a href="#vessel/e66f0a19bb" class="yacht-card-image">
+            <img src="photos/e66f0a19bb-1.jpg" alt="88' San Lorenzo yacht">
+            <button class="yacht-card-save" onclick="event.preventDefault();event.stopPropagation();toggleSave('e66f0a19bb')" aria-label="Save yacht">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg>
+            </button>
+          </a>
+          <a href="#vessel/e66f0a19bb" class="yacht-card-body">
+            <div class="yacht-card-header">
+              <h3>88' San Lorenzo</h3>
+            </div>
+            <div class="yacht-card-meta">Miami Beach &#183; 2018</div>
+            <div class="yacht-card-footer">
+              <div class="yacht-card-price">$14,300 <span>/ 4 hours</span></div>
+              <span class="yacht-card-link">View yacht <svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
+            </div>
+          </a>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -1152,8 +1210,16 @@ function buildAreaOptions() {
 }
 
 function renderHomeFeatured() {
-  const featured = ALL.filter(y => y.photo).sort(() => Math.random() - 0.5).slice(0, 4);
-  document.getElementById('homeFeatured').innerHTML = featured.map(yachtCardHTML).join('');
+  const container = document.getElementById('homeFeatured');
+  container.querySelectorAll('.yacht-card-save').forEach(btn => {
+    const link = btn.closest('.yacht-card').querySelector('a[href^="#vessel/"]');
+    if (link) {
+      const id = link.getAttribute('href').replace('#vessel/', '');
+      const isSaved = favorites.has(id);
+      btn.classList.toggle('active', isSaved);
+      btn.querySelector('svg').setAttribute('fill', isSaved ? 'currentColor' : 'none');
+    }
+  });
 }
 
 function yachtCardHTML(y) {
