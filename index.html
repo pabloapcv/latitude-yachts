@@ -235,9 +235,9 @@ footer{border-top:1px solid var(--border-soft);padding:40px 0}
 .photo-gallery-hero{position:relative;aspect-ratio:2.4/1;border-radius:var(--radius-l);overflow:hidden;cursor:pointer;box-shadow:var(--shadow)}
 .photo-gallery-hero img{width:100%;height:100%;object-fit:cover;transition:transform .3s}
 .photo-gallery-hero:hover img{transform:scale(1.02)}
-.photo-gallery-hero .photo-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.4) 0%,transparent 40%);opacity:0;transition:opacity .2s}
+.photo-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.4) 0%,transparent 40%);opacity:0;transition:opacity .2s;pointer-events:none}
 .photo-gallery-hero:hover .photo-overlay{opacity:1}
-.photo-gallery-hero .photo-expand{position:absolute;bottom:16px;right:16px;background:rgba(14,26,34,.7);color:#fff;padding:8px 14px;border-radius:999px;font-size:12px;font-weight:600;display:flex;align-items:center;gap:6px;backdrop-filter:blur(4px);opacity:0;transition:opacity .2s}
+.photo-expand{position:absolute;bottom:16px;right:16px;background:rgba(14,26,34,.7);color:#fff;padding:8px 14px;border-radius:999px;font-size:12px;font-weight:600;display:flex;align-items:center;gap:6px;backdrop-filter:blur(4px);opacity:0;transition:opacity .2s;pointer-events:none}
 .photo-gallery-hero:hover .photo-expand{opacity:1}
 .photo-gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:8px}
 @media (min-width:768px){.photo-gallery-grid{grid-template-columns:repeat(auto-fill,minmax(160px,1fr))}}
@@ -250,13 +250,29 @@ footer{border-top:1px solid var(--border-soft);padding:40px 0}
 .photo-gallery-thumb.active{border-color:var(--teal);opacity:1}
 .photo-gallery-thumb.active::after{background:rgba(19,104,99,.15)}
 .vessel-photo-gallery{margin-bottom:32px}
-.vessel-photo-gallery .photo-gallery-hero{aspect-ratio:unset;max-height:65vh;background:var(--surface-alt);display:flex;align-items:center;justify-content:center}
-.vessel-photo-gallery .photo-gallery-hero img{width:auto;height:auto;max-width:100%;max-height:65vh;object-fit:contain}
-.vessel-thumbs-grid{max-height:320px;overflow-y:auto;scrollbar-width:thin;scrollbar-color:var(--border) transparent}
-.vessel-thumbs-grid::-webkit-scrollbar{width:6px;height:6px}
-.vessel-thumbs-grid::-webkit-scrollbar-track{background:transparent}
-.vessel-thumbs-grid::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
-.vessel-thumbs-grid::-webkit-scrollbar-thumb:hover{background:var(--slate)}
+.vessel-mosaic{display:grid;grid-template-columns:2fr 1fr;grid-template-rows:1fr 1fr;gap:12px;height:min(56vh,480px);margin-bottom:14px}
+.vessel-mosaic-main{grid-column:1;grid-row:1/3;position:relative;min-height:0;border-radius:var(--radius-m);overflow:hidden;cursor:pointer}
+.vessel-mosaic-side{position:relative;min-height:0;border-radius:var(--radius-m);overflow:hidden;cursor:pointer}
+.vessel-mosaic-two .vessel-mosaic-side{grid-row:1/3}
+.vessel-mosaic-single{grid-template-columns:1fr;grid-template-rows:1fr}
+.vessel-mosaic-single .vessel-mosaic-main{grid-column:1;grid-row:1}
+.vessel-mosaic-main img,.vessel-mosaic-side img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s}
+.vessel-mosaic-main:hover img,.vessel-mosaic-side:hover img{transform:scale(1.03)}
+.vessel-mosaic .photo-expand{opacity:0}
+.vessel-mosaic-main:hover .photo-expand,.vessel-mosaic-main:hover .photo-overlay{opacity:1}
+.vessel-thumbs-head{display:flex;justify-content:space-between;align-items:center;margin:4px 0 12px;gap:12px}
+.vessel-thumbs-label{font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-faint);font-family:'IBM Plex Mono',monospace}
+.vessel-view-all{display:inline-flex;align-items:center;gap:6px;background:none;border:none;color:var(--teal);font-size:13px;font-weight:600;cursor:pointer;padding:0;font-family:inherit;flex-shrink:0}
+.vessel-view-all:hover{color:var(--teal-dark)}
+.vessel-thumbs-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(92px,1fr));gap:8px;max-height:none}
+.vessel-thumbs-grid .photo-gallery-thumb{padding:0;background:none;width:100%;display:block}
+@media (max-width:768px){
+  .vessel-mosaic{grid-template-columns:1fr 1fr;grid-template-rows:auto auto;height:auto}
+  .vessel-mosaic-main{grid-column:1/-1;grid-row:1;aspect-ratio:16/10;max-height:50vh}
+  .vessel-mosaic-side{aspect-ratio:4/3}
+  .vessel-mosaic-two .vessel-mosaic-side,.vessel-mosaic-single .vessel-mosaic-main{grid-row:auto}
+  .vessel-thumbs-grid{grid-template-columns:repeat(auto-fill,minmax(76px,1fr));gap:6px}
+}
 .photo-count-badge{position:absolute;bottom:8px;left:8px;background:rgba(14,26,34,.7);color:#fff;font-size:11px;font-weight:600;padding:4px 10px;border-radius:999px;backdrop-filter:blur(4px);display:flex;align-items:center;gap:5px}
 
 /* ---------- lightbox ---------- */
@@ -352,15 +368,15 @@ footer{border-top:1px solid var(--border-soft);padding:40px 0}
 .vessel-save{font-size:13px;color:var(--ink-muted);display:flex;align-items:center;gap:6px;cursor:pointer}
 .vessel-save:hover{color:var(--teal)}
 
-.vessel-gallery{display:grid;grid-template-columns:2fr 1fr;gap:12px;margin-bottom:40px}
-@media(max-width:768px){.vessel-gallery{grid-template-columns:1fr}}
-.vessel-gallery-main{aspect-ratio:16/10;border-radius:var(--radius-m);overflow:hidden;cursor:pointer}
-.vessel-gallery-main img{width:100%;height:100%;object-fit:cover}
-.vessel-gallery-thumbs{display:flex;flex-direction:column;gap:12px}
-@media(max-width:768px){.vessel-gallery-thumbs{flex-direction:row}}
-.vessel-gallery-thumb{flex:1;border-radius:var(--radius-s);overflow:hidden;cursor:pointer;opacity:.8;transition:opacity .15s}
-.vessel-gallery-thumb:hover{opacity:1}
-.vessel-gallery-thumb img{width:100%;height:100%;object-fit:cover}
+.vessel-gallery{display:grid;grid-template-columns:2fr 1fr;grid-template-rows:1fr 1fr;gap:12px;height:min(56vh,480px);margin-bottom:14px}
+@media(max-width:768px){.vessel-gallery{grid-template-columns:1fr 1fr;grid-template-rows:auto auto;height:auto}}
+.vessel-gallery-main{grid-column:1;grid-row:1/3;position:relative;min-height:0;border-radius:var(--radius-m);overflow:hidden;cursor:pointer}
+@media(max-width:768px){.vessel-gallery-main{grid-column:1/-1;grid-row:1;aspect-ratio:16/10}}
+.vessel-gallery-main img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.vessel-gallery-thumbs{display:contents}
+.vessel-gallery-thumb{position:relative;min-height:0;border-radius:var(--radius-m);overflow:hidden;cursor:pointer}
+@media(max-width:768px){.vessel-gallery-thumb{aspect-ratio:4/3}}
+.vessel-gallery-thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
 
 .vessel-layout{display:grid;grid-template-columns:1fr 380px;gap:48px;align-items:start}
 @media(max-width:900px){.vessel-layout{grid-template-columns:1fr}}
@@ -1246,7 +1262,7 @@ footer{border-top:1px solid var(--border-soft);padding:40px 0}
   <div class="gallery-modal-thumbs" id="galleryThumbs"></div>
 </div>
 
-<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo gallery">
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo gallery" tabindex="-1">
   <div class="lightbox-header">
     <div class="lightbox-counter" id="lightboxCounter">1 / 1</div>
     <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close gallery">
@@ -1454,28 +1470,31 @@ function galleryHTML(y){
 function vesselGalleryHTML(photos, name){
   if (!photos || !photos.length) return '';
   GAL_PHOTOS = photos; GAL_INDEX = 0;
+  const n = photos.length;
   const expandIcon = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>`;
   const cameraIcon = `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>`;
-  const heroHTML = `<div class="photo-gallery-hero" onclick="openLightbox(0)" id="vesselHero">
-    <img src="${photos[0]}" alt="${esc(name)}" id="vesselHeroImg">
-    <div class="photo-overlay"></div>
-    <span class="photo-expand">${expandIcon} View all ${photos.length} photos</span>
-    <span class="photo-count-badge">${cameraIcon} ${photos.length}</span>
-  </div>`;
-  const thumbsHTML = photos.map((p,i)=>`<div class="photo-gallery-thumb${i===0?' active':''}" onclick="setVesselPhoto(${i})" data-idx="${i}"><img src="${p}" alt="${esc(name)} photo ${i+1}" loading="lazy"></div>`).join('');
-  return `<div class="photo-gallery vessel-photo-gallery">
-    ${heroHTML}
-    <div class="photo-gallery-grid vessel-thumbs-grid">
+  const mosaicClass = n === 1 ? 'vessel-mosaic vessel-mosaic-single' : n === 2 ? 'vessel-mosaic vessel-mosaic-two' : 'vessel-mosaic';
+  const sideHTML = photos.slice(1, 3).map((p,i)=>`<div class="vessel-mosaic-side" onclick="openLightbox(${i+1})"><img src="${p}" alt="${esc(name)} photo ${i+2}" loading="lazy"></div>`).join('');
+  const mosaicHTML = `<div class="${mosaicClass}">
+      <div class="vessel-mosaic-main" onclick="openLightbox(0)">
+        <img src="${photos[0]}" alt="${esc(name)}">
+        <div class="photo-overlay"></div>
+        <span class="photo-expand">${expandIcon} View all ${n} photos</span>
+        ${n > 1 ? `<span class="photo-count-badge">${cameraIcon} ${n}</span>` : ''}
+      </div>
+      ${sideHTML}
+    </div>`;
+  const thumbsHTML = photos.map((p,i)=>`<button type="button" class="photo-gallery-thumb" onclick="openLightbox(${i})" aria-label="View photo ${i+1} of ${n}"><img src="${p}" alt="" loading="lazy"></button>`).join('');
+  return `<div class="vessel-photo-gallery">
+    ${mosaicHTML}
+    <div class="vessel-thumbs-head">
+      <span class="vessel-thumbs-label">${n} photos</span>
+      <button type="button" class="vessel-view-all" onclick="openLightbox(0)">${cameraIcon} View all ${n} photos</button>
+    </div>
+    <div class="vessel-thumbs-grid">
       ${thumbsHTML}
     </div>
   </div>`;
-}
-
-function setVesselPhoto(idx){
-  GAL_INDEX = idx;
-  const heroImg = document.getElementById('vesselHeroImg');
-  if(heroImg && GAL_PHOTOS[idx]) heroImg.src = GAL_PHOTOS[idx];
-  document.querySelectorAll('.vessel-thumbs-grid .photo-gallery-thumb').forEach((t,i)=>t.classList.toggle('active',i===idx));
 }
 
 function openLightbox(idx){
