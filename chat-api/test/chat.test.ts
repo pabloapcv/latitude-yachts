@@ -29,6 +29,7 @@ describe('mockReply', () => {
     const text = mockReply('What is a good yacht for 8 guests in Miami Beach?', '');
     assert.match(text, /Miami Beach/);
     assert.match(text, /#booking|#vessel\//);
+    assert.match(text, /^- /m);
     assert.doesNotMatch(text, /available today|is confirmed|WhatsApp|wa\.me/i);
   });
 

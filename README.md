@@ -1,6 +1,6 @@
 # Latitude °25
 
-An Airbnb-style charter yacht platform for South Florida — browse, filter, and request to book from a fleet of 306 vessels (21–124 ft), all mediated through a single concierge team rather than direct operator contact.
+An Airbnb-style charter yacht platform for South Florida — browse, filter, and request to book from a fleet of 273 vessels (21–124 ft), all mediated through a single concierge team rather than direct operator contact.
 
 **Live site:** https://latitude25.us/ (custom domain; also reachable at https://pabloapcv.github.io/latitude-yachts/)
 
@@ -10,7 +10,7 @@ An Airbnb-style charter yacht platform for South Florida — browse, filter, and
 - `chat.js` — floating concierge chat widget. Reads `CHAT_API_URL` and `WHATSAPP_NUMBER` at the top of the file; if `CHAT_API_URL` is empty the widget stays hidden so the Pages site is safe to ship before the API is deployed.
 - `data.json` — the fleet data and pricing, based on the SFLA Yacht Master List spreadsheet with a 10% concierge markup applied. Owner/operator contact info (name, phone, external photo-folder links) has been stripped out by design; the concierge team is the only point of contact shown.
 - `chat-api/` — small Vercel serverless backend (`POST /api/chat`) that streams concierge answers via the Vercel AI SDK / AI Gateway, grounded in a compact copy of the fleet plus FAQ/process copy from the site. GitHub Pages ignores it.
-- `photos/` — real photos for 111 of the 306 vessels, pulled from the original Dropbox/Google Drive listing folders. Everything else falls back to a generated nautical scene (an inline SVG, colored by vessel size/category) with no external image dependency.
+- `photos/` — real photos for 111 of the 273 vessels, pulled from the original Dropbox/Google Drive listing folders. Everything else falls back to a generated nautical scene (an inline SVG, colored by vessel size/category) with no external image dependency.
 - `robots.txt`, `sitemap.xml` — basic search-engine files for the live domain.
 
 ## Deploying changes

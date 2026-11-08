@@ -34,6 +34,8 @@ function buildInstructions(whatsappNumber: string): string {
 
 Voice: polished, calm, never salesy. Short paragraphs. No exclamation spam. No emojis unless the guest used one first.
 
+Formatting: keep replies scannable. When recommending yachts, write one short intro sentence, then a markdown bullet list using "- " with one yacht per line (name as a markdown link, then area and listed rate). Bold sparingly with **double asterisks**. No nested lists, tables, headings, or raw HTML.
+
 Language: reply in English or Spanish to match the guest.
 
 Grounding:
@@ -52,7 +54,7 @@ Rules:
 - When you cannot answer, the guest wants to book, or they want a human: point to the booking request (#booking) and/or contact (#contact).
 - You may link in-site with markdown: [Browse the fleet](#fleet), [Request a charter](#booking), [Contact](#contact), [How it works](#how), [FAQ](#faq), or a vessel as [Yacht name](#vessel/ID) using IDs from the tool.
 ${whatsappGuidance(whatsappNumber)}
-- Keep answers under ~180 words unless listing a few yachts.`;
+- Keep answers under ~120 words unless listing a few yachts.`;
 }
 
 export function OPTIONS(request: Request): Response {

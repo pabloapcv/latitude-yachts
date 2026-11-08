@@ -26,7 +26,7 @@
 <title>Latitude 25 &#176; &#8212; South Florida Yacht Charters</title>
 <meta name="description" content="Browse and book South Florida's charter fleet &#8212; from 21-foot day boats to 124-foot superyachts across Miami and Fort Lauderdale, all through one concierge team.">
 <meta property="og:title" content="Latitude &#176;25 &#8212; South Florida Yacht Charters">
-<meta property="og:description" content="306 vessels across Miami and Fort Lauderdale, curated and booked through one concierge team.">
+<meta property="og:description" content="273 vessels across Miami and Fort Lauderdale, curated and booked through one concierge team.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://latitude25.us/photos/84e6128c08-1.jpg">
 <meta name="theme-color" content="#0E1A22">
@@ -581,6 +581,13 @@ footer{border-top:1px solid var(--border-soft);padding:40px 0}
 .l25-chat-thread{flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:10px;background:var(--surface)}
 .l25-chat-bubble{max-width:86%;padding:12px 14px;border-radius:14px;font-size:14px;line-height:1.5;overflow-wrap:break-word;word-break:break-word}
 .l25-chat-bubble a{color:var(--teal);text-decoration:underline;text-underline-offset:2px}
+.l25-chat-bubble p{margin:0 0 .55em}
+.l25-chat-bubble p:last-child{margin-bottom:0}
+.l25-chat-bubble ul,.l25-chat-bubble ol{margin:.35em 0 .55em;padding-left:1.2em}
+.l25-chat-bubble li{margin:.28em 0}
+.l25-chat-bubble li::marker{color:var(--teal)}
+.l25-chat-user li::marker{color:rgba(255,255,255,.85)}
+.l25-chat-bubble strong{font-weight:600}
 .l25-chat-assistant{align-self:flex-start;background:var(--surface-alt);color:var(--ink);border-bottom-left-radius:4px}
 .l25-chat-user{align-self:flex-end;background:var(--teal);color:#fff;border-bottom-right-radius:4px}
 .l25-chat-user a{color:#fff}
@@ -693,7 +700,7 @@ footer{border-top:1px solid var(--border-soft);padding:40px 0}
       <div class="hero-content">
         <div class="eyebrow">SOUTH FLORIDA &#183; PRIVATE YACHT CHARTERS</div>
         <h1 class="display-lg">Your day at sea.<br>Beautifully<br><em>taken care of.</em></h1>
-        <p class="body-lg hero-text">306 vessels. One dedicated concierge. From Miami to Fort Lauderdale, find your yacht and leave the details to us.</p>
+        <p class="body-lg hero-text"><span data-fleet-count>273</span> vessels. One dedicated concierge. From Miami to Fort Lauderdale, find your yacht and leave the details to us.</p>
         <div class="hero-ctas">
           <a href="#fleet" class="btn btn-primary">Explore the fleet <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
           <a href="#booking" class="btn btn-secondary">Request a charter</a>
@@ -903,7 +910,7 @@ footer{border-top:1px solid var(--border-soft);padding:40px 0}
   <div class="wrap fleet-header">
     <div class="eyebrow">THE SOUTH FLORIDA FLEET</div>
     <h1 class="display-md">Find your day on the water.</h1>
-    <p class="body-md"><span id="fleetCount">306</span> listed vessels. Availability and exact capacity confirmed by your concierge.</p>
+    <p class="body-md"><span id="fleetCount" data-fleet-count>273</span> listed vessels. Availability and exact capacity confirmed by your concierge.</p>
     <div class="fleet-search">
       <label class="visually-hidden" for="fleetSearch">Search the fleet</label>
       <input type="text" id="fleetSearch" placeholder="Yacht name, brand or area" oninput="handleSearch(this.value)">
@@ -1363,11 +1370,17 @@ const AREAS = [
 
 const DUR_LABELS = { '4h': '4 hours', '6h': '6 hours', '8h': '8 hours' };
 
+function applyFleetCount(n) {
+  document.querySelectorAll('[data-fleet-count]').forEach(el => { el.textContent = String(n); });
+  const og = document.querySelector('meta[property="og:description"]');
+  if (og) og.setAttribute('content', n + ' vessels across Miami and Fort Lauderdale, curated and booked through one concierge team.');
+}
+
 fetch('data.json')
   .then(r => r.json())
   .then(data => {
     ALL = data.filter(y => y.prices && Object.keys(y.prices).length);
-    document.getElementById('fleetCount').textContent = ALL.length;
+    applyFleetCount(ALL.length);
     buildAreaOptions();
     renderHomeFeatured();
     renderFleet();

@@ -83,7 +83,7 @@ export function mockReply(userText: string, whatsappNumber: string): string {
       const lines = found.slice(0, 3).map((y) => {
         const shortName = y.name.replace(/^\d+['"]\s*/, '');
         const rate = y.prices['4h'] ? `$${y.prices['4h'].toLocaleString()} / 4h listed` : 'rate on request';
-        return `- [${y.size} ft ${shortName}](#vessel/${y.id}) · ${y.area} · about ${y.capacity ?? '?'} guests · ${rate}`;
+        return `- [${y.size} ft ${shortName}](#vessel/${y.id}) · ${y.area} · about ${y.capacity ?? '?'} guests · **${rate}**`;
       });
       const disclaimer = es
         ? 'Estas son tarifas de fin de semana publicadas, no un precio confirmado ni disponibilidad. Si alguna te encaja, envía un [request](#booking) y lo revisamos con el operador.'

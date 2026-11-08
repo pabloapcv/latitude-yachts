@@ -244,17 +244,64 @@
   }
 
   function renderMessage(text) {
-    let html = esc(text);
-    html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_, label, href) => {
+    const lines = String(text || '').replace(/\r\n/g, '\n').split('\n');
+    const out = [];
+    let list = null;
+
+    function closeList() {
+      if (!list) return;
+      out.push(list === 'ul' ? '</ul>' : '</ol>');
+      list = null;
+    }
+
+    function openList(type) {
+      if (list === type) return;
+      closeList();
+      out.push(type === 'ul' ? '<ul>' : '<ol>');
+      list = type;
+    }
+
+    for (const line of lines) {
+      const ul = line.match(/^\s*[-*•]\s+(.*)$/);
+      const ol = line.match(/^\s*\d+[.)]\s+(.*)$/);
+      if (ul) {
+        openList('ul');
+        out.push('<li>' + renderInline(ul[1]) + '</li>');
+        continue;
+      }
+      if (ol) {
+        openList('ol');
+        out.push('<li>' + renderInline(ol[1]) + '</li>');
+        continue;
+      }
+      closeList();
+      if (!line.trim()) continue;
+      out.push('<p>' + renderInline(line) + '</p>');
+    }
+    closeList();
+    return out.join('');
+  }
+
+  function renderInline(text) {
+    const held = [];
+    const hold = (html) => {
+      const key = `\u0000${held.length}\u0000`;
+      held.push(html);
+      return key;
+    };
+    let s = String(text || '');
+    s = s.replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, (_, label, href) => {
       const safe = sanitizeHref(href);
-      if (!safe) return esc(label);
-      return `<a href="${esc(safe)}"${anchorAttrs(safe)}>${esc(label)}</a>`;
+      if (!safe) return label;
+      return hold(`<a href="${esc(safe)}"${anchorAttrs(safe)}>${esc(label)}</a>`);
     });
-    html = html.replace(/(^|[^"'>\w])(#(?:booking|contact|fleet|faq|how|about|vessel\/[a-z0-9]+))\b/gi, (_, pre, hash) => {
-      return `${pre}<a href="${hash}">${hash}</a>`;
+    s = s.replace(/(^|[^"'>\w])(#(?:booking|contact|fleet|faq|how|about|vessel\/[a-z0-9]+))\b/gi, (_, pre, hash) => {
+      return pre + hold(`<a href="${hash}">${esc(hash)}</a>`);
     });
-    html = html.replace(/\n/g, '<br>');
-    return html;
+    s = s.replace(/\*\*([^*]+)\*\*/g, (_, inner) => hold(`<strong>${esc(inner)}</strong>`));
+    s = s.replace(/__([^_]+)__/g, (_, inner) => hold(`<strong>${esc(inner)}</strong>`));
+    s = esc(s);
+    return s.replace(/\u0000(\d+)\u0000/g, (_, i) => held[Number(i)]);
   }
 
   function sanitizeHref(href) {
