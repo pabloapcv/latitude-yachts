@@ -617,13 +617,8 @@ footer{border-top:1px solid var(--border-soft);padding:40px 0}
   body.l25-chat-open{overflow:hidden}
 }
 /* === INTERACTIVE HOMEPAGE STYLES === */
-.hero-aurora{position:relative;overflow:hidden;padding:0;min-height:85vh}
-.hero-aurora-bg{position:absolute;inset:0;background:var(--bg)}
-.hero-photo-bg{position:absolute;top:0;right:0;width:55%;height:100%;overflow:hidden}
-.hero-photo-bg img{width:100%;height:100%;object-fit:cover;object-position:center}
-.hero-photo-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to right,var(--bg) 0%,rgba(240,245,244,.7) 30%,rgba(240,245,244,.3) 60%,transparent 100%)}
-@media(max-width:1000px){.hero-photo-bg{position:relative;width:100%;height:320px;margin-bottom:-60px}.hero-photo-bg::after{background:linear-gradient(to top,var(--bg) 0%,rgba(240,245,244,.5) 40%,transparent 100%)}}
-@media(max-width:640px){.hero-photo-bg{height:280px;margin-bottom:-40px}}
+.hero-aurora{position:relative;overflow:hidden;padding:0;min-height:90vh}
+.hero-aurora-bg{position:absolute;inset:0;background:var(--bg);z-index:0}
 .aurora-glow{position:absolute;border-radius:50%;filter:blur(100px);pointer-events:none}
 .aurora-glow-1{top:-15%;left:-10%;width:600px;height:600px;background:rgba(19,104,99,.12);animation:drift1 25s ease-in-out infinite}
 .aurora-glow-2{top:10%;right:-15%;width:500px;height:500px;background:rgba(19,104,99,.08);animation:drift2 30s ease-in-out infinite}
@@ -640,9 +635,16 @@ footer{border-top:1px solid var(--border-soft);padding:40px 0}
 .aurora-line-1{stroke:url(#lineGrad1)}
 .aurora-line-2{stroke:url(#lineGrad2);animation-direction:reverse;animation-duration:35s}
 @keyframes flowLine{0%,100%{transform:translateX(0) translateY(0)}50%{transform:translateX(-80px) translateY(15px)}}
-.hero-aurora-content{position:relative;z-index:1;max-width:1200px;margin:0 auto;padding:100px 24px 40px;display:grid;grid-template-columns:1fr 400px;gap:48px;align-items:center;min-height:calc(85vh - 64px)}
-@media(max-width:1000px){.hero-aurora-content{grid-template-columns:1fr;gap:24px;padding:0 24px 32px;min-height:auto}}
-@media(max-width:640px){.hero-aurora-content{padding:0 16px 24px}}
+.hero-aurora-content{position:relative;z-index:1;max-width:1200px;margin:0 auto;padding:100px 24px 48px;display:grid;grid-template-columns:1fr 520px;gap:40px;align-items:start;min-height:calc(90vh - 64px)}
+@media(max-width:1100px){.hero-aurora-content{grid-template-columns:1fr 1fr;gap:32px}}
+@media(max-width:900px){.hero-aurora-content{grid-template-columns:1fr;gap:24px;padding:80px 24px 40px;min-height:auto}}
+@media(max-width:640px){.hero-aurora-content{padding:60px 16px 32px}}
+.hero-photo-card{position:relative;width:100%;border-radius:var(--radius-xl);overflow:hidden;box-shadow:0 24px 48px rgba(14,26,34,.15)}
+.hero-photo-card img{display:block;width:100%;height:auto;aspect-ratio:16/10}
+.hero-photo-card::after{content:'';position:absolute;inset:0;border-radius:inherit;box-shadow:inset 0 0 0 1px rgba(19,104,99,.12)}
+.hero-panel-wrapper{position:relative;margin-top:-100px;margin-left:20px;margin-right:20px;z-index:2}
+@media(max-width:900px){.hero-right-col{order:-1}.hero-photo-card{max-width:100%}.hero-panel-wrapper{margin-top:-60px;margin-left:16px;margin-right:16px}}
+@media(max-width:640px){.hero-panel-wrapper{margin-top:-40px;margin-left:12px;margin-right:12px}}
 .hero-aurora-text{max-width:540px}
 .hero-aurora-text h1{margin-bottom:20px}
 .hero-aurora-text h1 em{font-style:italic;color:var(--brass)}
@@ -661,7 +663,6 @@ footer{border-top:1px solid var(--border-soft);padding:40px 0}
 .plan-section{margin-bottom:20px}
 .plan-section-label{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:10px}
 .hero-panel-cta{width:100%;justify-content:center}
-@media(max-width:1000px){.hero-panel{max-width:500px;margin:0 auto}}
 
 /* Featured Yachts Strip */
 .featured-strip{padding:40px 0 56px;overflow:hidden}
@@ -835,9 +836,6 @@ html.js-reveal .reveal.visible{opacity:1;transform:translateY(0)}
 <div class="page active" id="page-home">
   <!-- HERO with Aurora Effects -->
   <section class="hero-aurora">
-    <div class="hero-photo-bg">
-      <img src="photos/8060c5fbac-1.jpg" alt="Luxury yacht charter cruising Biscayne Bay with Miami skyline" width="1600" height="899">
-    </div>
     <div class="hero-aurora-bg">
       <!-- Aurora glows -->
       <div class="aurora-glow aurora-glow-1"></div>
@@ -882,38 +880,45 @@ html.js-reveal .reveal.visible{opacity:1;transform:translateY(0)}
         </div>
         <p class="hero-aurora-note">An inquiry, not a commitment. No payment required.</p>
       </div>
-      <div class="hero-panel">
-          <div class="hero-panel-header">
-            <h3>Plan your day</h3>
-            <span class="hero-panel-badge">$520 &#8211; $14,950</span>
-          </div>
-        <div class="plan-section">
-          <div class="plan-section-label">Group size</div>
-          <div class="plan-chips" id="groupChips">
-            <button type="button" class="plan-chip active" onclick="setPlanChip(this,'group')">2&#8211;6 guests</button>
-            <button type="button" class="plan-chip" onclick="setPlanChip(this,'group')">7&#8211;12 guests</button>
-            <button type="button" class="plan-chip" onclick="setPlanChip(this,'group')">13&#8211;25 guests</button>
-            <button type="button" class="plan-chip" onclick="setPlanChip(this,'group')">25+ guests</button>
+      <div class="hero-right-col">
+        <div class="hero-photo-card">
+          <img src="photos/8060c5fbac-1.jpg" alt="Luxury yacht charter cruising Biscayne Bay with Miami skyline" width="1600" height="899" fetchpriority="high">
+        </div>
+        <div class="hero-panel-wrapper">
+          <div class="hero-panel">
+            <div class="hero-panel-header">
+              <h3>Plan your day</h3>
+              <span class="hero-panel-badge">$520 &#8211; $14,950</span>
+            </div>
+            <div class="plan-section">
+              <div class="plan-section-label">Group size</div>
+              <div class="plan-chips" id="groupChips">
+                <button type="button" class="plan-chip active" onclick="setPlanChip(this,'group')">2&#8211;6 guests</button>
+                <button type="button" class="plan-chip" onclick="setPlanChip(this,'group')">7&#8211;12 guests</button>
+                <button type="button" class="plan-chip" onclick="setPlanChip(this,'group')">13&#8211;25 guests</button>
+                <button type="button" class="plan-chip" onclick="setPlanChip(this,'group')">25+ guests</button>
+              </div>
+            </div>
+            <div class="plan-section">
+              <div class="plan-section-label">Boat size</div>
+              <div class="plan-chips" id="sizeChips">
+                <button type="button" class="plan-chip" onclick="setPlanChipLink(this,'21-40')">21&#8211;40 ft</button>
+                <button type="button" class="plan-chip active" onclick="setPlanChipLink(this,'41-70')">41&#8211;70 ft</button>
+                <button type="button" class="plan-chip" onclick="setPlanChipLink(this,'71-124')">71&#8211;124 ft</button>
+              </div>
+            </div>
+            <div class="plan-section">
+              <div class="plan-section-label">Occasion</div>
+              <div class="plan-chips" id="occasionChips">
+                <button type="button" class="plan-chip" onclick="setPlanChip(this,'occasion')">Birthday</button>
+                <button type="button" class="plan-chip" onclick="setPlanChip(this,'occasion')">Bachelorette</button>
+                <button type="button" class="plan-chip" onclick="setPlanChip(this,'occasion')">Corporate</button>
+                <button type="button" class="plan-chip" onclick="setPlanChip(this,'occasion')">Day trip</button>
+              </div>
+            </div>
+            <a href="#fleet" class="btn btn-primary hero-panel-cta" id="heroPanelCta">Find matching yachts <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
           </div>
         </div>
-        <div class="plan-section">
-          <div class="plan-section-label">Boat size</div>
-          <div class="plan-chips" id="sizeChips">
-            <button type="button" class="plan-chip" onclick="setPlanChipLink(this,'21-40')">21&#8211;40 ft</button>
-            <button type="button" class="plan-chip active" onclick="setPlanChipLink(this,'41-70')">41&#8211;70 ft</button>
-            <button type="button" class="plan-chip" onclick="setPlanChipLink(this,'71-124')">71&#8211;124 ft</button>
-          </div>
-        </div>
-        <div class="plan-section">
-          <div class="plan-section-label">Occasion</div>
-          <div class="plan-chips" id="occasionChips">
-            <button type="button" class="plan-chip" onclick="setPlanChip(this,'occasion')">Birthday</button>
-            <button type="button" class="plan-chip" onclick="setPlanChip(this,'occasion')">Bachelorette</button>
-            <button type="button" class="plan-chip" onclick="setPlanChip(this,'occasion')">Corporate</button>
-            <button type="button" class="plan-chip" onclick="setPlanChip(this,'occasion')">Day trip</button>
-          </div>
-        </div>
-        <a href="#fleet" class="btn btn-primary hero-panel-cta" id="heroPanelCta">Find matching yachts <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
       </div>
     </div>
   </section>
