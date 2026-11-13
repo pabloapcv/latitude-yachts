@@ -42,19 +42,19 @@ export function mockReply(userText: string, whatsappNumber: string): string {
     if (es) {
       return 'Con gusto. Un request en el sitio no es una reserva confirmada: nuestro concierge verifica disponibilidad y la tarifa final con el operador, y te escribe antes de que te comprometas. Empieza aquí: #booking. También puedes escribir a concierge@latitude25.us.';
     }
-    return 'Gladly. A request on the site is an inquiry, not a confirmed reservation. Your concierge checks availability and the final rate with the operator, then writes to you before you commit. Start here: #booking. You may also email concierge@latitude25.us.';
+    return 'Gladly. A request on the site is an inquiry, not a confirmed reservation. Your concierge checks availability and the final rate, then writes to you before you commit. Start here: #booking. You may also email concierge@latitude25.us.';
   }
 
   if (/how (does|do)|process|work|pago|pay|fee|precio|price|include|disponib|available|guest|capacity|capacidad/i.test(lower) && !/\d+\s*(ft|foot|guest)/i.test(lower)) {
     if (/pay|pago|fee|online|price|precio|rate|tarifa|include|incluye/i.test(lower)) {
       return es
-        ? 'No hay tarifas por navegar ni por enviar un request. El sitio no cobra en línea; el pago se coordina después de la confirmación, fuera de la web, con el concierge o el operador. Las tarifas publicadas son estimados de fin de semana del operador para 4, 6 y 8 horas, y pueden variar por día, combustible, propina y extras.'
-        : 'There are no browsing or request fees. The site does not take payment online; payment is arranged after confirmation, off-site, with the concierge or the operator. Listed rates are operator weekend estimates for 4, 6 and 8 hours, and may change with date, fuel, gratuity and extras.';
+        ? 'No hay tarifas por navegar ni por enviar un request. El sitio no cobra en línea; el pago se coordina después de la confirmación, fuera de la web, con el concierge. Las tarifas publicadas son tarifas de partida para fines de semana de 4, 6 y 8 horas, y pueden variar por día, combustible, propina y extras.'
+        : 'There are no browsing or request fees. The site does not take payment online; payment is arranged after confirmation, off-site, with the concierge. Listed rates are starting weekend rates for 4, 6 and 8 hours, and may change with date, fuel, gratuity and extras.';
     }
     if (/available|disponib|date/i.test(lower)) {
       return es
         ? 'Las fichas no son disponibilidad en vivo. Confirmamos tu fecha con el operador después del inquiry. Si ese yate no está libre, proponemos una fecha cercana o un barco comparable en la misma zona y eslora.'
-        : 'Listings are not live availability. We check your date with the operator after you inquire. If that yacht is taken, we can offer a nearby date or a comparable vessel in the same area and size class.';
+        : 'Listings are not live availability. We verify your date after you inquire. If that yacht is taken, we can offer a nearby date or a comparable vessel in the same area and size class.';
     }
     if (/guest|capacit|cuántos|cuantos/i.test(lower)) {
       return es
@@ -63,7 +63,7 @@ export function mockReply(userText: string, whatsappNumber: string): string {
     }
     return es
       ? 'El flujo es simple: eliges un yate (o nos pides recomendación), envías un request con fecha, duración y grupo, y el concierge confirma con el operador. Recibes confirmación por escrito antes de comprometerte. Empieza en [Request a charter](#booking) o lee [How it works](#how).'
-      : 'The path is simple: choose a yacht (or ask us to match you), send a request with date, duration and party size, and your concierge confirms with the operator. You receive written confirmation before you commit. Start at [Request a charter](#booking) or see [How it works](#how).';
+      : 'The path is simple: choose a yacht (or ask us to match you), send a request with date, duration and party size, and your concierge confirms availability. You receive written confirmation before you commit. Start at [Request a charter](#booking) or see [How it works](#how).';
   }
 
   const parsed = parseSearch(userText);
@@ -87,7 +87,7 @@ export function mockReply(userText: string, whatsappNumber: string): string {
       });
       const disclaimer = es
         ? 'Estas son tarifas de fin de semana publicadas, no un precio confirmado ni disponibilidad. Si alguna te encaja, envía un [request](#booking) y lo revisamos con el operador.'
-        : 'These are listed weekend estimates — not confirmed pricing or availability. If one of these suits, send a [charter request](#booking) and we will check it with the operator.';
+        : 'These are listed weekend estimates — not confirmed pricing or availability. If one of these suits, send a [charter request](#booking) and we will verify availability for you.';
       const intro = es
         ? 'Algunas opciones de la flota que encajan con lo que describes:'
         : 'A few listings from the fleet that match what you described:';

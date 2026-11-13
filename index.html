@@ -617,8 +617,13 @@ footer{border-top:1px solid var(--border-soft);padding:40px 0}
   body.l25-chat-open{overflow:hidden}
 }
 /* === INTERACTIVE HOMEPAGE STYLES === */
-.hero-aurora{position:relative;overflow:hidden;padding:0;min-height:100vh}
+.hero-aurora{position:relative;overflow:hidden;padding:0;min-height:85vh}
 .hero-aurora-bg{position:absolute;inset:0;background:var(--bg)}
+.hero-photo-bg{position:absolute;top:0;right:0;width:55%;height:100%;overflow:hidden}
+.hero-photo-bg img{width:100%;height:100%;object-fit:cover;object-position:center}
+.hero-photo-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to right,var(--bg) 0%,rgba(240,245,244,.7) 30%,rgba(240,245,244,.3) 60%,transparent 100%)}
+@media(max-width:1000px){.hero-photo-bg{position:relative;width:100%;height:320px;margin-bottom:-60px}.hero-photo-bg::after{background:linear-gradient(to top,var(--bg) 0%,rgba(240,245,244,.5) 40%,transparent 100%)}}
+@media(max-width:640px){.hero-photo-bg{height:280px;margin-bottom:-40px}}
 .aurora-glow{position:absolute;border-radius:50%;filter:blur(100px);pointer-events:none}
 .aurora-glow-1{top:-15%;left:-10%;width:600px;height:600px;background:rgba(19,104,99,.12);animation:drift1 25s ease-in-out infinite}
 .aurora-glow-2{top:10%;right:-15%;width:500px;height:500px;background:rgba(19,104,99,.08);animation:drift2 30s ease-in-out infinite}
@@ -635,15 +640,9 @@ footer{border-top:1px solid var(--border-soft);padding:40px 0}
 .aurora-line-1{stroke:url(#lineGrad1)}
 .aurora-line-2{stroke:url(#lineGrad2);animation-direction:reverse;animation-duration:35s}
 @keyframes flowLine{0%,100%{transform:translateX(0) translateY(0)}50%{transform:translateX(-80px) translateY(15px)}}
-.hero-aurora-content{position:relative;z-index:1;max-width:1200px;margin:0 auto;padding:100px 24px 48px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;min-height:calc(100vh - 64px)}
-@media(max-width:1000px){.hero-aurora-content{grid-template-columns:1fr;gap:32px;padding:80px 24px 32px;min-height:auto}}
-@media(max-width:640px){.hero-aurora-content{padding:60px 16px 24px}}
-.hero-yacht-photo{position:relative;border-radius:var(--radius-l);overflow:hidden;box-shadow:var(--shadow-lg);aspect-ratio:16/10}
-.hero-yacht-photo img{width:100%;height:100%;object-fit:cover}
-.hero-yacht-photo::after{content:'';position:absolute;inset:0;border-radius:inherit;box-shadow:inset 0 0 0 1px rgba(19,104,99,.1)}
-@media(max-width:1000px){.hero-yacht-photo{max-width:540px;margin:0 auto}}
-.hero-right{display:flex;flex-direction:column;gap:24px}
-@media(max-width:1000px){.hero-right{order:-1}}
+.hero-aurora-content{position:relative;z-index:1;max-width:1200px;margin:0 auto;padding:100px 24px 40px;display:grid;grid-template-columns:1fr 400px;gap:48px;align-items:center;min-height:calc(85vh - 64px)}
+@media(max-width:1000px){.hero-aurora-content{grid-template-columns:1fr;gap:24px;padding:0 24px 32px;min-height:auto}}
+@media(max-width:640px){.hero-aurora-content{padding:0 16px 24px}}
 .hero-aurora-text{max-width:540px}
 .hero-aurora-text h1{margin-bottom:20px}
 .hero-aurora-text h1 em{font-style:italic;color:var(--brass)}
@@ -662,7 +661,7 @@ footer{border-top:1px solid var(--border-soft);padding:40px 0}
 .plan-section{margin-bottom:20px}
 .plan-section-label{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:10px}
 .hero-panel-cta{width:100%;justify-content:center}
-@media(max-width:1000px){.hero-panel{order:-1;max-width:500px;margin:0 auto}}
+@media(max-width:1000px){.hero-panel{max-width:500px;margin:0 auto}}
 
 /* Featured Yachts Strip */
 .featured-strip{padding:40px 0 56px;overflow:hidden}
@@ -836,6 +835,9 @@ html.js-reveal .reveal.visible{opacity:1;transform:translateY(0)}
 <div class="page active" id="page-home">
   <!-- HERO with Aurora Effects -->
   <section class="hero-aurora">
+    <div class="hero-photo-bg">
+      <img src="photos/8060c5fbac-1.jpg" alt="Luxury yacht charter cruising Biscayne Bay with Miami skyline" width="1600" height="899">
+    </div>
     <div class="hero-aurora-bg">
       <!-- Aurora glows -->
       <div class="aurora-glow aurora-glow-1"></div>
@@ -880,11 +882,7 @@ html.js-reveal .reveal.visible{opacity:1;transform:translateY(0)}
         </div>
         <p class="hero-aurora-note">An inquiry, not a commitment. No payment required.</p>
       </div>
-      <div class="hero-right">
-        <div class="hero-yacht-photo">
-          <img src="photos/8060c5fbac-1.jpg" alt="Luxury yacht charter cruising Biscayne Bay with Miami skyline" width="1600" height="899">
-        </div>
-        <div class="hero-panel">
+      <div class="hero-panel">
           <div class="hero-panel-header">
             <h3>Plan your day</h3>
             <span class="hero-panel-badge">$520 &#8211; $14,950</span>
@@ -916,7 +914,6 @@ html.js-reveal .reveal.visible{opacity:1;transform:translateY(0)}
           </div>
         </div>
         <a href="#fleet" class="btn btn-primary hero-panel-cta" id="heroPanelCta">Find matching yachts <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
-        </div>
       </div>
     </div>
   </section>
@@ -950,7 +947,7 @@ html.js-reveal .reveal.visible{opacity:1;transform:translateY(0)}
       </div>
       <div class="occasions-grid">
         <a href="miami-bachelorette-yacht-rental.html" class="occasion-card">
-          <img src="photos/8060c5fbac-5.jpg" alt="Bachelorette party on yacht" loading="lazy">
+          <img src="photos/28103879a3-1.jpg" alt="Bachelorette party on yacht deck with Miami skyline" loading="lazy">
           <div class="occasion-card-overlay"></div>
           <div class="occasion-card-content">
             <h3>Bachelorette</h3>
@@ -977,7 +974,7 @@ html.js-reveal .reveal.visible{opacity:1;transform:translateY(0)}
           </div>
         </a>
         <a href="miami-proposal-yacht.html" class="occasion-card">
-          <img src="photos/84e6128c08-3.jpg" alt="Romantic yacht proposal" loading="lazy">
+          <img src="photos/effcf285d7-1.jpg" alt="Romantic yacht charter with couple on bow" loading="lazy">
           <div class="occasion-card-overlay"></div>
           <div class="occasion-card-content">
             <h3>Proposal</h3>
@@ -1058,7 +1055,7 @@ html.js-reveal .reveal.visible{opacity:1;transform:translateY(0)}
           </div>
         </a>
         <a href="#fleet" class="size-card" onclick="setLengthFilter('41-70')">
-          <img src="photos/8b6acee855-1.jpg" alt="Motor yacht" loading="lazy">
+          <img src="photos/c2b90a9107-1.jpg" alt="43-foot Pardo motor yacht" loading="lazy">
           <div class="size-card-content">
             <h3>41&#8211;70 ft</h3>
             <span class="size-card-link">Explore <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
@@ -1066,7 +1063,7 @@ html.js-reveal .reveal.visible{opacity:1;transform:translateY(0)}
           </div>
         </a>
         <a href="#fleet" class="size-card" onclick="setLengthFilter('71-124')">
-          <img src="photos/e66f0a19bb-1.jpg" alt="88-foot San Lorenzo superyacht" loading="lazy">
+          <img src="photos/5a77543bdb-1.jpg" alt="86-foot Azimut superyacht" loading="lazy">
           <div class="size-card-content">
             <h3>71&#8211;124 ft</h3>
             <span class="size-card-link">Explore <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
@@ -1092,7 +1089,7 @@ html.js-reveal .reveal.visible{opacity:1;transform:translateY(0)}
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
           </button>
           <div class="faq-answer">
-            <div class="faq-answer-inner">Listed prices are operator weekend rates for 4, 6, and 8-hour charters. Your concierge confirms the final rate &#8212; including any weekday, holiday, fuel, or gratuity adjustments &#8212; before you commit.</div>
+            <div class="faq-answer-inner">Listed prices are starting rates for 4, 6, and 8-hour weekend charters. Your concierge confirms the final rate, including any weekday, holiday, fuel, or gratuity details, before you commit.</div>
           </div>
         </div>
         <div class="faq-item-accordion">
@@ -1128,7 +1125,7 @@ html.js-reveal .reveal.visible{opacity:1;transform:translateY(0)}
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
           </button>
           <div class="faq-answer">
-            <div class="faq-answer-inner">No request or browsing fees. Pricing shown is the operator&#8217;s rate. We earn a referral fee from the operator, not from you.</div>
+            <div class="faq-answer-inner">No request or browsing fees. There is no additional cost to use our concierge service.</div>
           </div>
         </div>
       </div>
@@ -1233,7 +1230,7 @@ html.js-reveal .reveal.visible{opacity:1;transform:translateY(0)}
       <div id="fleetGrid" class="yacht-grid"></div>
       <div class="fleet-callout">
         <h4>A clearer quote, before you commit.</h4>
-        <p>Rates shown are operator-listed weekend estimates for 4 hours. Date, fuel, gratuity and extras may affect your final quote.</p>
+        <p>Rates shown are starting weekend estimates for 4 hours. Date, fuel, gratuity and extras may affect your final quote.</p>
       </div>
       <div class="fleet-cta">
         <h3>Not sure which yacht?</h3>
@@ -1275,7 +1272,7 @@ html.js-reveal .reveal.visible{opacity:1;transform:translateY(0)}
       <div class="faq-content">
         <div class="faq-item">
           <h3>How is pricing determined?</h3>
-          <p>Listed prices are operator weekend rates for 4, 6, and 8-hour charters. Your concierge confirms the final rate &#8212; including any weekday, holiday, fuel, or gratuity adjustments &#8212; before you commit.</p>
+          <p>Listed prices are starting rates for 4, 6, and 8-hour weekend charters. Your concierge confirms the final rate, including any weekday, holiday, fuel, or gratuity details, before you commit.</p>
         </div>
         <div class="faq-item">
           <h3>Can I pay online?</h3>
@@ -1287,7 +1284,7 @@ html.js-reveal .reveal.visible{opacity:1;transform:translateY(0)}
         </div>
         <div class="faq-item">
           <h3>Do you charge a booking fee?</h3>
-          <p>No request or browsing fees. Pricing shown is the operator&#8217;s rate.</p>
+          <p>No request or browsing fees. There is no additional cost to use our concierge service.</p>
         </div>
         <div class="faq-item">
           <h3>How many guests can a vessel hold?</h3>
@@ -1366,13 +1363,13 @@ html.js-reveal .reveal.visible{opacity:1;transform:translateY(0)}
     <div class="page-content" style="padding-top:48px">
       <h2>Good to know</h2>
       <h3>How is pricing determined?</h3>
-      <p>Listed prices are operator weekend rates for 4, 6, and 8-hour charters. Your concierge confirms the final rate &#8212; including any weekday, holiday, fuel, or gratuity adjustments &#8212; before you commit.</p>
+      <p>Listed prices are starting rates for 4, 6, and 8-hour weekend charters. Your concierge confirms the final rate, including any weekday, holiday, fuel, or gratuity details, before you commit.</p>
       <h3>Can I pay online?</h3>
       <p>Not yet. Requests are reviewed by our concierge team, who arrange payment directly with you once your charter is confirmed.</p>
       <h3>What if my date isn&#8217;t available?</h3>
       <p>Your concierge will offer the closest available dates or a comparable vessel in the same area and size class.</p>
       <h3>Do you charge a booking fee?</h3>
-      <p>No request or browsing fees. Pricing shown is the operator&#8217;s rate.</p>
+      <p>No request or browsing fees. There is no additional cost to use our concierge service.</p>
       <h3>How many guests can a vessel hold?</h3>
       <p>Guest counts shown are an editorial estimate based on vessel length, not an official USCG passenger certificate. Your concierge confirms exact capacity when booking.</p>
     </div>
@@ -1438,7 +1435,7 @@ html.js-reveal .reveal.visible{opacity:1;transform:translateY(0)}
       <h3>2. What the Site does</h3>
       <p>The Site lets you browse available vessels and submit a request to book. Submitting a request is an inquiry, not a confirmed reservation. A charter is only confirmed once our concierge team has verified availability and final pricing with the Operator and you've received written confirmation (by email or otherwise).</p>
       <h3>3. Pricing</h3>
-      <p>Prices shown are Operator-set weekend rates for standard charter durations and are estimates only. Final pricing &#8212; including weekday, holiday, fuel, and gratuity adjustments &#8212; is confirmed by your concierge before you commit to a booking.</p>
+      <p>Prices shown are starting weekend rates for standard charter durations and are estimates only. Final pricing &#8212; including weekday, holiday, fuel, and gratuity adjustments &#8212; is confirmed by your concierge before you commit to a booking.</p>
       <h3>4. Payments</h3>
       <p>The Site does not process payments. Any deposit or payment for a confirmed charter is arranged directly between you and our concierge team or the Operator, outside the Site, and is subject to the payment and cancellation terms you're given at the time of booking.</p>
       <h3>5. The charter itself</h3>

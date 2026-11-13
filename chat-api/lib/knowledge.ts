@@ -10,7 +10,7 @@ How booking works:
 4. Guest boards at the listed location; the operator and crew run the charter.
 
 Pricing:
-- Prices shown are operator-set weekend rates for 4, 6, and 8-hour charters, and are estimates only.
+- Prices shown are starting weekend rates for 4, 6, and 8-hour charters, and are estimates only.
 - Final pricing may change for weekday, holiday, fuel, gratuity, and extras. The concierge confirms before the guest commits.
 - No browsing or request fees.
 - The site does not process payments. Payment is arranged after confirmation, off-site, with the concierge or operator.
