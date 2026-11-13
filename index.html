@@ -635,9 +635,15 @@ footer{border-top:1px solid var(--border-soft);padding:40px 0}
 .aurora-line-1{stroke:url(#lineGrad1)}
 .aurora-line-2{stroke:url(#lineGrad2);animation-direction:reverse;animation-duration:35s}
 @keyframes flowLine{0%,100%{transform:translateX(0) translateY(0)}50%{transform:translateX(-80px) translateY(15px)}}
-.hero-aurora-content{position:relative;z-index:1;max-width:1200px;margin:0 auto;padding:100px 24px 60px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;min-height:calc(100vh - 64px)}
-@media(max-width:1000px){.hero-aurora-content{grid-template-columns:1fr;gap:40px;padding:80px 24px 40px;min-height:auto}}
-@media(max-width:640px){.hero-aurora-content{padding:60px 16px 32px}}
+.hero-aurora-content{position:relative;z-index:1;max-width:1200px;margin:0 auto;padding:100px 24px 48px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;min-height:calc(100vh - 64px)}
+@media(max-width:1000px){.hero-aurora-content{grid-template-columns:1fr;gap:32px;padding:80px 24px 32px;min-height:auto}}
+@media(max-width:640px){.hero-aurora-content{padding:60px 16px 24px}}
+.hero-yacht-photo{position:relative;border-radius:var(--radius-l);overflow:hidden;box-shadow:var(--shadow-lg);aspect-ratio:16/10}
+.hero-yacht-photo img{width:100%;height:100%;object-fit:cover}
+.hero-yacht-photo::after{content:'';position:absolute;inset:0;border-radius:inherit;box-shadow:inset 0 0 0 1px rgba(19,104,99,.1)}
+@media(max-width:1000px){.hero-yacht-photo{max-width:540px;margin:0 auto}}
+.hero-right{display:flex;flex-direction:column;gap:24px}
+@media(max-width:1000px){.hero-right{order:-1}}
 .hero-aurora-text{max-width:540px}
 .hero-aurora-text h1{margin-bottom:20px}
 .hero-aurora-text h1 em{font-style:italic;color:var(--brass)}
@@ -659,7 +665,7 @@ footer{border-top:1px solid var(--border-soft);padding:40px 0}
 @media(max-width:1000px){.hero-panel{order:-1;max-width:500px;margin:0 auto}}
 
 /* Featured Yachts Strip */
-.featured-strip{padding:64px 0;overflow:hidden}
+.featured-strip{padding:40px 0 56px;overflow:hidden}
 .featured-strip-header{display:flex;justify-content:space-between;align-items:flex-end;max-width:1200px;margin:0 auto 32px;padding:0 24px}
 @media(max-width:640px){.featured-strip-header{padding:0 16px;flex-direction:column;align-items:flex-start;gap:12px}}
 .featured-strip-scroll{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding:0 max(24px,calc((100vw - 1200px)/2 + 24px));scrollbar-width:none}
@@ -738,10 +744,11 @@ footer{border-top:1px solid var(--border-soft);padding:40px 0}
 .footer-seo-row:last-child{margin-bottom:0}
 .footer-bottom-enhanced{display:flex;justify-content:space-between;align-items:center;padding-top:24px;font-size:12px;color:var(--ink-faint);flex-wrap:wrap;gap:12px}
 
-/* Scroll reveal animations */
-.reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
-.reveal.visible{opacity:1;transform:translateY(0)}
-@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+/* Scroll reveal animations - visible by default for no-JS/bots; JS adds html.js-reveal class to enable animation */
+.reveal{opacity:1;transform:none}
+html.js-reveal .reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+html.js-reveal .reveal.visible{opacity:1;transform:translateY(0)}
+@media(prefers-reduced-motion:reduce){html.js-reveal .reveal{opacity:1;transform:none;transition:none}}
 
 @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}.aurora-glow,.aurora-line{animation:none!important}}
 </style>
@@ -873,11 +880,15 @@ footer{border-top:1px solid var(--border-soft);padding:40px 0}
         </div>
         <p class="hero-aurora-note">An inquiry, not a commitment. No payment required.</p>
       </div>
-      <div class="hero-panel">
-        <div class="hero-panel-header">
-          <h3>Plan your day</h3>
-          <span class="hero-panel-badge">$520 &#8211; $14,950</span>
+      <div class="hero-right">
+        <div class="hero-yacht-photo">
+          <img src="photos/8060c5fbac-1.jpg" alt="Luxury yacht charter cruising Biscayne Bay with Miami skyline" width="1600" height="899">
         </div>
+        <div class="hero-panel">
+          <div class="hero-panel-header">
+            <h3>Plan your day</h3>
+            <span class="hero-panel-badge">$520 &#8211; $14,950</span>
+          </div>
         <div class="plan-section">
           <div class="plan-section-label">Group size</div>
           <div class="plan-chips" id="groupChips">
@@ -905,6 +916,7 @@ footer{border-top:1px solid var(--border-soft);padding:40px 0}
           </div>
         </div>
         <a href="#fleet" class="btn btn-primary hero-panel-cta" id="heroPanelCta">Find matching yachts <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+        </div>
       </div>
     </div>
   </section>
@@ -2670,15 +2682,30 @@ function toggleFaqAccordion(btn) {
   if (!wasOpen) item.classList.add('open');
 }
 
-// Scroll reveal animation
+// Scroll reveal animation - adds js-reveal class only when JS runs, ensuring no-JS fallback visibility
 function initScrollReveal() {
   const reveals = document.querySelectorAll('.reveal');
   if (!reveals.length) return;
+  
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (prefersReducedMotion) {
     reveals.forEach(el => el.classList.add('visible'));
     return;
   }
+  
+  // Enable reveal animations via CSS class on html
+  document.documentElement.classList.add('js-reveal');
+  
+  // Immediately reveal elements already in or above viewport
+  const viewportHeight = window.innerHeight;
+  reveals.forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < viewportHeight + 100) {
+      el.classList.add('visible');
+    }
+  });
+  
+  // Observe remaining hidden elements with low threshold
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -2686,8 +2713,13 @@ function initScrollReveal() {
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-  reveals.forEach(el => observer.observe(el));
+  }, { threshold: 0.05, rootMargin: '100px 0px 0px 0px' });
+  
+  reveals.forEach(el => {
+    if (!el.classList.contains('visible')) {
+      observer.observe(el);
+    }
+  });
 }
 
 // Initialize on data load
