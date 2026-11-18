@@ -80,7 +80,7 @@
   </url>
   <url>
     <loc>https://latitude25.us/blog/</loc>
-    <lastmod>2026-11-13</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -99,6 +99,12 @@
   <url>
     <loc>https://latitude25.us/blog/where-to-see-manatees-near-miami.html</loc>
     <lastmod>2026-11-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://latitude25.us/blog/miami-art-week-2026-first-timers-guide.html</loc>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
